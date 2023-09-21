@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function render(){
+            document.getElementById("list").innerHTML = "";
+            if(localStorage.getItem("avengers")){
+                var tempStorage = localStorage.getItem("avengers");
+                var tempList = JSON.parse(tempStorage);
+                for(var i = 0; i < tempList.length; i++){
+                    document.getElementById("list").innerHTML+="<li>"+tempList[i].name+" : "+tempList[i].power+"</li> "
+                } 
+            }else{
+                alert("nothing to interate")
+            }
+        }
+        window.onstorage = function(){
+            render();
+        }
+        window.onload = function(){
+            render();
+        }
+    </script>
+</head>
+<body>
+    <ul id="list"></ul>
+</body>
+</html>

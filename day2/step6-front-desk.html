@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="avengername">Avenger's Name</label>
+    <input id="avengername" type="text">
+    <br>
+    <label for="avengerpower">Power</label>
+    <input id="avengerpower" type="range">
+    <br>
+    <button onclick="addAvenger()">Add Avenger</button>
+    <script>
+        window.onload = function(){
+            if(!localStorage.getItem("avengers")){         
+                localStorage.setItem("avengers","[]");
+            }
+        }
+        function addAvenger(){
+            var avenger = {
+                name : document.getElementById("avengername").value,
+                power : document.getElementById("avengerpower").value
+            }
+            var tempStorage = localStorage.getItem("avengers");
+            var tempList = JSON.parse(tempStorage);
+            tempList.push(avenger);
+            localStorage.setItem("avengers", JSON.stringify(tempList));            
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- [
+ { name : "Ironman", power : 7 },
+ { name : "Hulk", power : 8 },
+ { name : "Captain America", power : 6 },
+ { name : "Thor", power : 9 },
+] -->

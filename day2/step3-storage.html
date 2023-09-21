@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+    <label for="uname">User Name : </label>
+    <input id="uname" type="text" />
+    <br>
+    <label for="uage">User Age : </label>
+    <input id="uage" type="number" />
+    <br>
+    <button onclick="storeInfo()" type="submit">Submit</button>
+    <button onclick="getInfo()" type="submit">Get User Info</button>
+    <ul>
+        <li>User Name : <span id="un"></span></li>
+        <li>User Age : <span id="ua"></span></li>
+    </ul>
+    <script>
+        window.user = {};
+        function storeInfo(){
+            if(document.getElementById("uname").value && document.getElementById("uage").value){
+                window.user.name = document.getElementById("uname").value;  
+                window.user.age = document.getElementById("uage").value;  
+                alert("user info is stored")
+            };
+        }
+        function getInfo(){
+            document.getElementById("un").textContent = window.user.name;
+            document.getElementById("ua").textContent = window.user.age;
+        }
+    </script>
+</body>
+</html>

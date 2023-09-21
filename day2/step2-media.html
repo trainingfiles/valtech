@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media API</title>
+</head>
+<body>
+    <h1>Video Player</h1>
+    <hr>
+    <h2>Current Time : <span id="ct"></span></h2>
+    <video id="vid">
+        <source src="media/html5.webm">
+        <source src="media/html5.mp4">
+    </video>
+    <br>
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+    <button onclick="stopVideo()">Stop</button>
+    <script>
+        console.log(document.getElementById("vid").canPlayType("video/mp4"));
+        console.log(document.getElementById("vid").canPlayType("video/ogg"));
+        console.log(document.getElementById("vid").canPlayType("video/webm"));
+        var si = null;
+        function logTime(){       
+            si = setInterval(function(){
+                document.getElementById("ct").innerText = document.getElementById("vid").currentTime;
+                // console.log(Math.random())
+            },1);
+        }
+        function stopLog(){
+            clearInterval(si);
+        }
+        function playVideo(){
+            document.getElementById("vid").play();
+            logTime();
+        }
+        function pauseVideo(){
+            document.getElementById("vid").pause();
+            stopLog()
+        }
+        function stopVideo(){
+            document.getElementById("vid").currentTime = 0;
+            document.getElementById("ct").innerText = 0;
+            document.getElementById("vid").pause();
+            stopLog();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+            display: block;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500" id="can"></canvas>
+    <img id="raj" src="images/rajani.jpg">
+    <script>
+        /* 
+            translate(left offset, top offset)  
+            scale(width multiplier, height multiplier)
+            rotate(radiance);
+        */
+        var can = document.getElementById("can");
+        var ctx = can.getContext("2d");
+        ctx.drawImage(document.getElementById("raj"),0,0,200,200);
+        /*      
+        ctx.font = "bold 50px arial";
+        ctx.fillStyle = "orange";
+        ctx.fillText("Valtech", 0, 50);
+        ctx.font = "bold 20px arial";
+        ctx.fillStyle = "black";
+        ctx.fillText("Bengaluru", 10, 70); 
+        */
+       // ctx.translate(0,10);
+       // ctx.scale(4,4);
+       // ctx.rotate((Math.PI / 180) * 45);
+       // ctx.fillText("Valtech",0,0);
+    </script>
+    
+</body>
+</html>

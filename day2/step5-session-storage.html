@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+<body>
+    <label for="uname">User Name : </label>
+    <input id="uname" type="text" />
+    <br>
+    <label for="uage">User Age : </label>
+    <input id="uage" type="number" />
+    <br>
+    <button onclick="storeInfo()" type="submit">Submit</button>
+    <button onclick="getInfo()" type="submit">Get User Info</button>
+    <hr>
+    <button onclick="getCount()">count of stored info</button>
+    <button onclick="removeAge()">remove age info</button>
+    <button onclick="removeInfo()">remove all</button>
+    <button onclick="getKeyNameOfFirst()">first info</button>
+    <button onclick="getKeyValueOfFirst()">first info's value</button>
+    <ul>
+        <li>User Name : <span id="un"></span></li>
+        <li>User Age : <span id="ua"></span></li>
+    </ul>
+    <script>
+        function removeAge(){
+            sessionStorage.removeItem("age");
+        }
+        function removeInfo(){
+            sessionStorage.clear();
+        }
+        function getCount(){
+            alert("Local Storage has : "+sessionStorage.length+" items ");
+        }
+        function getKeyNameOfFirst(){
+            alert("First Stored info is : "+sessionStorage.key(0));
+        }
+        function getKeyValueOfFirst(){
+           //  alert();
+            alert("First Stored info's value is : "+sessionStorage.getItem(sessionStorage.key(0)));
+        }
+        function storeInfo(){
+            if(document.getElementById("uname").value && document.getElementById("uage").value){
+               /*  
+                sessionStorage.name = document.getElementById("uname").value;  
+                sessionStorage.age = document.getElementById("uage").value;   
+                */
+               sessionStorage.setItem("name",document.getElementById("uname").value);
+               sessionStorage.setItem("age",document.getElementById("uage").value);
+               alert("user info is stored")
+            };
+        }
+        function getInfo(){
+           /*  
+           */
+            document.getElementById("un").textContent = sessionStorage.getItem('name');
+            document.getElementById("ua").textContent = sessionStorage.getItem('age'); 
+        }
+    </script>
+</body>
+</html>
