@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outputs</title>
+    <script>
+        function changeHandler(source, target){
+            document.getElementById(target).value = source.value;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl #</th>
+                <th>Output Type</th>
+                <th>Input</th>
+                <th>As Displayed in the browser</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Progress</td>
+                <td>
+                    <progress></progress>
+                </td>
+                <td>
+                    <progress></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Progress with value</td>
+                <td>
+                    <input min="0" max="1" step="0.1" oninput="changeHandler(this,'prog1')" type="range">
+                </td>
+                <td>
+                    <progress id="prog1" value="0.5"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Meter with no value</td>
+                <td>
+
+                </td>
+                <td>
+                    <meter value="0"></meter>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Meter with value 1</td>
+                <td></td>
+                <td>
+                    <meter value="1"></meter>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Meter with value 0.5</td>
+                <td></td>
+                <td>
+                    <meter value="0.5"></meter>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Meter when the value is lower than low</td>
+                <td></td>
+                <td>
+                    <meter value="0.3" low="0.4"></meter>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Meter when the value is higher than high</td>
+                <td></td>
+                <td>
+                    <meter value="0.9" high="0.7" ></meter>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Meter value higher than high & optimum lower than low </td>
+                <td></td>
+                <td>
+                    <meter high="0.4" low="0.3" optimum="0.2" value="0.6"></meter>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Meter value lower than low & optimum higher than high </td>
+                <td></td>
+                <td>
+                    <meter high="0.4" low="0.3" optimum="0.7" value="0.2"></meter>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

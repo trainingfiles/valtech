@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <label for="uname">User Name : </label>
+        <input required name="uname" id="uname" type="text" />
+        <br>
+        <label for="uage">User Age : </label>
+        <input required min="20" max="90" step="5" name="uage" id="uage" type="number" />
+        <br>
+        <label for="uphone">User Phone : </label>
+        <input required title="###-####-####" pattern="\d{3}-\d{4}-\d{4}" name="uphone" id="uphone" type="text" />
+        <br>
+        <label for="ucity">User City : </label>
+        <input required name="ucity" id="ucity" type="text" />
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        var uage = document.getElementById("uage");
+        uage.setCustomValidity("you must enter your age");
+        uage.addEventListener("change",function(){
+            if(uage.value < 20){
+                uage.setCustomValidity("you are younger to join us");
+            }else if(uage.value > 90){
+                uage.setCustomValidity("you too old to join us");
+            }else{
+                uage.setCustomValidity("");
+            }
+        });
+    </script>
+</body>
+</html>

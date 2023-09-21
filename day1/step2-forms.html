@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Inputs</title>
+    <script>
+       /*  function changeHandler(source,target){
+            document.getElementById(target).value = source.value;
+        } */
+        function changeHandler(source){
+            // console.log(source.type);
+            document.getElementById("out_"+source.type).value = source.value;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl #</th>
+                <th>Type</th>
+                <th>As Rendered in the browser</th>
+                <th>Input Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>text</td>
+                <td>
+                    <input oninput="changeHandler(this)" type="text" />
+                </td>
+                <td>
+                    <output id="out_text">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>search</td>
+                <td>
+                    <input type="search" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_search">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>number</td>
+                <td>
+                    <input type="number" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_number">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>range</td>
+                <td>
+                    <input type="range" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_range">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>color</td>
+                <td>
+                    <input type="color" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_color">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>time</td>
+                <td>
+                    <input type="time" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_time">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>date</td>
+                <td>
+                    <input type="date" oninput="changeHandler(this)"  />
+                </td>s
+                <td>
+                    <output id="out_date">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>datetime-local</td>
+                <td>
+                    <input type="datetime-local" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_datetime-local">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>week</td>
+                <td>
+                    <input type="week" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_week">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>month</td>
+                <td>
+                    <input type="month" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_month">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>email</td>
+                <td>
+                    <input type="email" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_email">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>tel</td>
+                <td>
+                    <input type="tel" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_tel">waiting...</output>
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>url</td>
+                <td>
+                    <input type="url" oninput="changeHandler(this)"  />
+                </td>
+                <td>
+                    <output id="out_url">waiting...</output>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
