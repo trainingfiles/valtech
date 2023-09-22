@@ -1,0 +1,28 @@
+assignment #1
+create a greeting using canvas for diwali
+add stars, rockets and greeting message 
+( make it colorful by using gradients and patterns )
+
+assignment #2
+create a form to accept new employee registration all fields required
+form must accept
+firstname 
+lastname 
+email
+gender ( radio button )
+age ( age should be validated )
+city of birth -> dropdown with following cities (with no default cities selected)
+	bangalore, jaipur, sambalpur, mangalore, patna, srinagar, kanpur, guwahati, hassan, ramnagar, bidar, 	tumkur.
+select your resume / ( only pdf, doc and docx are allowed );
+position applying for (multiple choice like developer, designer, testing engineer, sales support, HR )
+tentative joining date 
+
+
+assignment #3
+create a simple website with 4 pages which can be navigated
+use semantic tags, images (contact page can be the assignment #2)
+apply basic styles to make the page look attractive.
+
+
+assignment #4
+the form from assignment #3 will check if the user is offline then the form data will be stored locally 
