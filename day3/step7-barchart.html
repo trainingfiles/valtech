@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 2px solid grey;
+            display: block;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        var sales = [100,68,51,89,313,260,450,7,420,27,333,490,321];
+        var ctx = document.getElementById("can").getContext("2d");
+        var gap = 10;
+        ctx.strokeStyle = "silver";
+       function hline(height){
+        ctx.beginPath();
+        ctx.moveTo(0,height);
+        ctx.lineTo(500,height);
+        ctx.closePath();
+        ctx.stroke()
+       };
+       function vline(height){
+        ctx.beginPath();
+        ctx.moveTo(height,0);
+        ctx.lineTo(height,500);
+        ctx.closePath();
+        ctx.stroke()
+       };
+       for(var i = 0; i < 500; i+=10){
+        hline(i);
+        vline(i);
+       };
+       ctx.strokeStyle = "grey";
+       for(var i = 0; i < 500; i+=50){
+        hline(i);
+        vline(i);
+       };
+       for(var i = 0; i < sales.length; i++){
+           var sale = sales[i];
+           ctx.font = "bold 13px arial";
+           ctx.fillRect(gap,(500-sale),20,sale);
+           ctx.fillText(sale,gap,(500-sale));
+           gap+=30;
+       };
+    </script>
+</body>
+</html>

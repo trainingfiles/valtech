@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 2px solid red;
+            display: block;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        /* what is animation */
+        var ctx = document.getElementById("can").getContext("2d");
+        setInterval(function(){
+            // ctx.clearRect(0,0,500,500); 
+            var boxX = Math.round(Math.random() * 500);
+            var boxY = Math.round(Math.random() * 500);
+            var boxW = Math.round(Math.random() * 100);
+            var boxH = Math.round(Math.random() * 100);
+            var r = Math.round(Math.random() * 255);
+            var g = Math.round(Math.random() * 255);
+            var b = Math.round(Math.random() * 255);
+            var a = Math.random();
+            ctx.fillStyle = "rgba("+r+","+g+","+b+","+a+")";
+            ctx.fillRect(boxX,boxY,boxW,boxW);
+        },10)
+    </script>
+</body>
+</html>

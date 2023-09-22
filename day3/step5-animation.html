@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 2px solid red;
+            display: block;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        var boxX = 0;
+        var boxY = 0;
+        /* what is animation */
+        var ctx = document.getElementById("can").getContext("2d");
+        setInterval(function(){
+           /*  
+            ctx.fillStyle = "white";
+            ctx.fillRect(0,0,500,500); 
+            */
+            ctx.clearRect(0,0,500,500); 
+            ctx.fillStyle = "black";
+            ctx.fillRect(boxX,0,50,50);
+            boxX += 2;
+            if(boxX > 500){
+                boxX = -50
+            }
+        },1)
+    </script>
+</body>
+</html>

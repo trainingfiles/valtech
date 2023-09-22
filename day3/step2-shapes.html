@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 2px solid red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500" id="can1"></canvas>
+    <canvas width="500" height="500" id="can2"></canvas>
+    <script>
+        var can1 = document.getElementById("can1");
+        var ctx1 = can1.getContext("2d");
+        // ctx1.fillRect("left","top","width","height");
+        ctx1.translate(50,50);
+
+        ctx1.fillStyle = "yellow";
+        ctx1.fillRect(0,0,150,50);
+
+        ctx1.fillStyle = "red";
+        ctx1.fillRect(0,50,150,50);
+        //=======================================
+        var can2 = document.getElementById("can2");
+        var ctx2 = can2.getContext("2d");
+        // ctx2.fillRect("left","top","width","height");
+        ctx2.translate(50,250);
+
+        ctx2.fillStyle = "blue";
+        ctx2.fillRect(0,0,150,50);
+
+        ctx2.fillStyle = "red";
+        ctx2.fillRect(0,50,150,50);
+    </script>
+</body>
+</html>
