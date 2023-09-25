@@ -1,0 +1,32 @@
+Wednesday, September 20, 2023	HTML / HTML5
+Thursday, September 21, 2023	HTML / HTML5
+Friday, September 22, 2023	HTML / HTML5
+Monday, September 25, 2023	HTML / HTML5
+Tuesday, September 26, 2023	CSS / CSS3
+Wednesday, September 27, 2023	CSS / CSS3
+Thursday, September 28, 2023	CSS / CSS3
+Tuesday, October 3, 2023	JavaScript / ES6 / AJAX
+Wednesday, October 4, 2023	JavaScript / ES6 / AJAX
+Thursday, October 5, 2023	JavaScript / ES6 / AJAX
+Friday, October 6, 2023	JavaScript / ES6 / AJAX
+Monday, October 9, 2023	JavaScript / ES6 / AJAX
+Thursday, October 12, 2023	NodeJS
+Friday, October 13, 2023	NodeJS
+Monday, October 16, 2023	TypeScript
+Tuesday, October 17, 2023	TypeScript
+	
+Monday, November 6, 2023	ReactJS
+Tuesday, November 7, 2023	ReactJS
+Wednesday, November 8, 2023	ReactJS
+Thursday, November 9, 2023	ReactJS
+Friday, November 10, 2023	ReactJS
+	
+Thursday, November 16, 2023	React Testing
+Friday, November 17, 2023	React Libraries
+	
+Wednesday, December 6, 2023	React Native
+Thursday, December 7, 2023	React Native
+	
+Monday, December 11, 2023	VueJS
+Tuesday, December 12, 2023	VueJS
+Wednesday, December 13, 2023	VueJS
