@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Selectors</title>
+    <style>
+       /*  element / tag */
+       p{
+           background-color: darkblue;
+           color: aliceblue;
+           padding: 10px;
+        }
+        aside{
+            background-color: darkslategray;
+            color: azure;
+            padding: 10px;
+        }
+        input{
+            border : 2px solid red;
+        }
+        /*  class */
+        .box{
+            background-color: indianred;
+            color: oldlace;
+            padding: 10px;
+        }
+
+        #player{
+            background-color: midnightblue;
+            color: cyan;
+            padding: 10px;
+        }
+        /* desendent */
+        div span{
+            background-color: yellowgreen;
+        }
+        /* general sibling */
+        ul~section{
+            border:  10px dotted blueviolet;
+        }
+        /* adjecent sibling */
+        ul+section{
+            border:  10px dotted red;
+        }
+        a{
+            background-color: aqua;
+        }
+        /* pseudo class */
+        a:link{
+            background-color: rgb(236, 214, 13);
+        }
+        a:visited{
+            background-color: rgb(236, 13, 106);
+        }
+        section:hover{
+            background-color: yellow;
+        }
+        /* pseudo elements */
+        article{
+            font-family: sans-serif;
+        }
+        article:first-letter{
+           font-family: Georgia, 'Times New Roman', Times, serif;
+           font-size: 44px;
+        }
+        article:first-line{
+            background-color: yellow;
+        }
+        a+ul{
+            list-style: square;
+        }
+        a+ul li:before{
+           /* content: " hello there"; */
+           content: url(images/rajani.jpg) ;
+        }
+        input:hover{
+            background-color: blueviolet;
+        }
+        input:focus{
+            background-color: greenyellow;
+        }
+        input:active{
+            background-color: red;
+        }
+        </style>
+</head>
+<body>
+    <p>
+        first paragraph
+        <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reprehenderit voluptatem magnam, sit enim repudiandae veniam voluptatum laboriosam nulla inventore veritatis odit est totam officiis similique maiores dolorem incidunt consequatur?
+    </p>
+    <aside>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit animi quam ratione a repudiandae quae, minus autem vero architecto eaque quos perspiciatis commodi labore error, nulla culpa? Similique, earum in.
+    </aside>
+    <p class="box">
+        second paragraph
+        <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reprehenderit voluptatem magnam, sit enim repudiandae veniam voluptatum laboriosam nulla inventore veritatis odit est totam officiis similique maiores dolorem incidunt consequatur?
+    </p>
+    <section class="box">
+        third paragraph
+        <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reprehenderit voluptatem magnam, sit enim repudiandae veniam voluptatum laboriosam nulla inventore veritatis odit est totam officiis similique maiores dolorem incidunt consequatur?
+    </section>
+    <input type="radio">
+    <section id="player">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reprehenderit voluptatem magnam, sit enim repudiandae veniam voluptatum laboriosam nulla inventore veritatis odit est totam officiis similique maiores dolorem incidunt consequatur?
+    </section>
+    <span>I am SPAN</span>
+    <div>
+        <p>
+            Lorem ipsum dolor, <span>sit amet consectetur</span> adipisicing elit. Corrupti, ad! A consequuntur minima impedit maxime dignissimos rerum commodi necessitatibus debitis nemo aliquam porro sit temporibus hic animi, eum veritatis sequi?
+        </p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error, deserunt aspernatur vel expedita quidem! Corporis, dicta natus dolorem adipisci inventore, molestiae asperiores sint explicabo quia libero quae ipsam eaque?
+    </div>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <section>
+        Section after ul tag
+        <br>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quia aperiam ex repellat voluptate dicta molestias reiciendis! Laudantium, nemo. Commodi nisi amet quaerat? Deleniti architecto ratione nisi. Porro, autem non!
+    </section>
+    <section>
+        Section after ul tag
+        <br>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quia aperiam ex repellat voluptate dicta molestias reiciendis! Laudantium, nemo. Commodi nisi amet quaerat? Deleniti architecto ratione nisi. Porro, autem non!
+    </section>
+    <section>
+        Section after ul tag
+        <br>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quia aperiam ex repellat voluptate dicta molestias reiciendis! Laudantium, nemo. Commodi nisi amet quaerat? Deleniti architecto ratione nisi. Porro, autem non!
+    </section>
+    <section>
+        Section after ul tag
+        <br>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quia aperiam ex repellat voluptate dicta molestias reiciendis! Laudantium, nemo. Commodi nisi amet quaerat? Deleniti architecto ratione nisi. Porro, autem non!
+    </section>
+    <a>Dummy Anchor</a>
+    <br>
+    <a href="#">Live Anchor</a>
+    <br>
+    <a href="http://cricbuzz.com">Anchor not visited</a>
+    <br>
+    <a href="http://developer.mozilla.com">Anchor visited</a>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <article>
+       Vijay am an article tag Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laborum
+        consequuntur ea reprehenderit officiis quos eum, perspiciatis autem asperiores aperiam possimus ut eius, debitis pariatur veniam blanditiis quae, fugit voluptates?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci assumenda illum molestias eius est odio architecto expedita aliquid fugit nulla rerum, exercitationem reprehenderit praesentium sequi quos necessitatibus aut at! Consequuntur!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius magni quis maxime eligendi, culpa minima, cupiditate ipsa et ipsum mollitia molestias! Ducimus ipsum neque repellendus odio impedit accusantium nisi eum.
+    </article>
+    <article>
+        I am an article tag  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laborum 
+        consequuntur ea reprehenderit officiis quos eum, perspiciatis autem asperiores aperiam possimus ut eius, debitis pariatur veniam blanditiis quae, fugit voluptates?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci assumenda illum molestias eius est odio architecto expedita aliquid fugit nulla rerum, exercitationem reprehenderit praesentium sequi quos necessitatibus aut at! Consequuntur!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius magni quis maxime eligendi, culpa minima, cupiditate ipsa et ipsum mollitia molestias! Ducimus ipsum neque repellendus odio impedit accusantium nisi eum.
+    </article>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+</body>
+</html>
