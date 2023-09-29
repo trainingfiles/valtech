@@ -1,0 +1,8 @@
+Create the web page
+====================
+
+Task is to use the images in the images folder to create the web template that looks like assignment-1.jpg file
+once done upload as an archive to your github with your name mentioned in the archive file 
+also provide a notes.txt with what were the challenges and how you overcame them while solving the assignment 
+
+so for example your assignment must be named yourname.zip with images and index.html file along with notes.txt file in side the archive.
