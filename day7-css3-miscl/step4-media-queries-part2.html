@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/screen.css" media="screen">
+    <link rel="stylesheet" href="styles/1000.css" media="screen and ( max-width : 1000px )">
+    <link rel="stylesheet" href="styles/900.css" media="screen and ( max-width : 900px )">
+    <link rel="stylesheet" href="styles/800.css" media="screen and ( max-width : 800px )">
+    <link rel="stylesheet" href="styles/700.css" media="screen and ( max-width : 700px )">
+    <link rel="stylesheet" href="styles/600.css" media="screen and ( max-width : 600px )">
+    <link rel="stylesheet" href="styles/landscape.css" media="screen and ( orientation : landscape )">
+    <link rel="stylesheet" href="styles/portrait.css" media="screen and ( orientation : portrait )">
+    <link rel="stylesheet" href="styles/print.css" media="print"> 
+    <script>
+        window.onload = function(){
+            setInterval(function(){
+                document.getElementById("log").innerText = innerWidth+"px"
+            },1)
+        }
+    </script>
+</head>
+<body>
+    <h1>Width is <span id="log"></span></h1>
+    <div class="container">
+        <div class="box1 x"></div>
+        <div class="box2 x"></div>
+        <div class="bo3 x"></div>
+        <div class="box4 x"></div>
+        <div class="box5 x"></div>
+        <div class="box6 x"></div>
+        <div class="box7 x"></div>
+        <div class="box8 x"></div>
+        <div class="box9 x"></div>
+        <div class="box10 x"></div>
+    </div>
+</body>
+</html>

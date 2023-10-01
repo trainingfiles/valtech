@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes valtech {
+            from{
+                background-color: crimson;
+                width: 200px;
+                height: 200px;
+                transform: rotate(0deg);
+            }
+            to{
+                background-color: blue;
+                width: 20px;
+                height: 20px;
+                transform: rotate(360deg);
+            }
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            margin: 100px auto;
+        }
+        .box{
+          animation-name: valtech;
+          animation-duration: 3s;
+          animation-iteration-count: infinite
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

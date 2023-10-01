@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes valtech {
+            from{
+                background: url(images/horse.jpg) 0px;
+            }   
+            to{
+                background: url(images/horse.jpg) 2200px;
+            }
+        }
+        .box{
+            width: 200px;
+            height: 134px;
+            background: url(images/horse.jpg) 0px;
+        }
+        .box{
+            animation-name: valtech;
+            animation-duration: 184ms;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

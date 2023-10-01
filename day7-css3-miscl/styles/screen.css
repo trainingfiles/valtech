@@ -1,0 +1,12 @@
+.container{
+    height: 500px;
+    border: 20px dashed darkorange;
+    margin: 50px auto;
+}
+.x{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: darkorange;
+    float: left;
+}

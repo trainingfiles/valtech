@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container{
+            height: 600px;
+            width: 1000px;
+            background-color: rgb(59, 59, 59);
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 50px;
+        }
+        .x{
+            text-align: center;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box1{
+            background-color: #F94144;
+        }
+        .box2{
+            background-color: #F3722C;
+        }
+        .box3{
+            background-color: #F8961E;
+        }
+        .box4{
+            background-color: #F9844A;
+        }
+        .box5{
+            background-color: #F9C74F;
+        }
+        .box6{
+            background-color: #90BE6D;
+        }
+        .box7{
+            background-color: #43AA8B;
+        }
+        .box8{
+            background-color: #4D908E;
+        }
+        .box9{
+            background-color: #577590;
+        }
+        .box10{
+            background-color: #277DA1;
+        }
+        .container{
+           display: grid;
+           gap: 10px;
+        }
+        .box1{
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+        .box2{
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+        .box3{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .box4{
+            grid-column: 2/5;
+            grid-row: 2/3;
+        }
+        .box5{
+            
+        }
+        .box6{
+            grid-column: 2/4;
+            grid-row: 3/4;
+        }
+        .box7{
+           
+        }
+        .box8{
+            grid-column: 1/3;
+            grid-row: 4/5;
+        }
+        .box9{
+            grid-column: 3/5;
+            grid-row: 4/5;
+        }
+        .box10{
+            grid-column: 1/5;
+            grid-row: 5/6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1 x"> box 1 </div>
+        <div class="box2 x"> box 2 </div>
+        <div class="box3 x"> box 3 </div>
+        <div class="box4 x"> box 4 </div>
+        <div class="box5 x"> box 5 </div>
+        <div class="box6 x"> box 6 </div>
+        <div class="box7 x"> box 7 </div>
+        <div class="box8 x"> box 8 </div>
+        <div class="box9 x"> box 9 </div>
+        <div class="box10 x"> box 10 </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.container{
+    height: 500px;
+    outline: 2px solid grey;
+    margin: 50px auto;
+}
+.x{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid black;
+    float: left;
+}

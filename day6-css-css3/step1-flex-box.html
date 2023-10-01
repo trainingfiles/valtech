@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(59, 59, 59);
+        }
+        .x{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            color: whitesmoke;
+            line-height: 100px;
+        }
+        .box1{
+            background-color: #F94144;
+        }
+        .box2{
+            background-color: #F3722C;
+        }
+        .box3{
+            background-color: #F8961E;
+        }
+        .box4{
+            background-color: #F9844A;
+        }
+        .box5{
+            background-color: #F9C74F;
+        }
+        .box6{
+            background-color: #90BE6D;
+        }
+        .box7{
+            background-color: #43AA8B;
+        }
+        .box8{
+            background-color: #4D908E;
+        }
+        .box9{
+            background-color: #577590;
+        }
+        .box10{
+            background-color: #277DA1;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+       /*  
+        .box1{
+            order: 1;
+        }
+        .box3{
+            order: 1;
+        }
+        .box5{
+            order: 1;
+        }
+        .box7{
+            order: 1;
+        }
+        .box10{
+            order: 2;
+        }
+        .box4{
+            order: 3;
+        } 
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1 x"> box 1 </div>
+        <div class="box2 x"> box 2 </div>
+        <div class="box3 x"> box 3 </div>
+        <div class="box4 x"> box 4 </div>
+        <div class="box5 x"> box 5 </div>
+        <div class="box6 x"> box 6 </div>
+        <div class="box7 x"> box 7 </div>
+        <div class="box8 x"> box 8 </div>
+        <div class="box9 x"> box 9 </div>
+        <div class="box10 x"> box 10 </div>
+    </div>
+</body>
+</html>
