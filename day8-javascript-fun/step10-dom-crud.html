@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 400px;
+            overflow: auto;
+            background-color: darkslategray;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container .box{
+            height: 100px;
+            flex-basis: 100px;
+            background-color: springgreen;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+    </style>
+    <script>
+        var count = 1;
+        function clickHandler(){
+            /*   
+            var elm = document.createElement("div");
+                elm.textContent = count;
+                elm.setAttribute("class", "box"); 
+            */
+            document.getElementsByClassName("container")[0].innerHTML+="<div class='box'>"+count+"</div>";
+            count++;
+        }
+        function stopHandler(){
+            document.getElementsByTagName("button")[0].removeEventListener("click", clickHandler);
+        }
+        function logHandler(){
+            console.log("add box was clicked")
+        }
+        function init(){
+            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler);
+            document.getElementsByTagName("button")[0].addEventListener("click", logHandler);
+
+            document.getElementsByTagName("button")[1].addEventListener("click", stopHandler);
+        }
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <button>Add Box</button>
+    <button>Stop Adding Box</button>
+    <div class="container"></div>
+</body>
+</html>

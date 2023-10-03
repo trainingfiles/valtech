@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digital Clock <span id="clock">00 : 00 : 00</span> </h1>
+    <script>
+        setInterval(function(){
+            var date = new Date();
+            document.getElementById("clock").innerText = date.getHours() + " : "+ date.getMinutes()+" : "+date.getSeconds() ;
+        },1000);
+    </script>
+</body>
+</html>

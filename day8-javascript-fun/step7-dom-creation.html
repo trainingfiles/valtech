@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .container .box{
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            color : papayawhip;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <button onclick="deleteFirst()">Delete Fist</button>
+    <script>
+        var elm1 = document.createElement("div");
+            elm1.textContent="Box1";
+            elm1.setAttribute("class","box");
+        var elm2 = document.createElement("div");
+            elm2.textContent="Box2";
+            elm2.setAttribute("class","box");
+        var elm3 = document.createElement("div");
+            elm3.textContent="Box3";
+            elm3.setAttribute("class","box");
+        var elm4 = document.createElement("div");
+            elm4.textContent="Box4";
+            elm4.setAttribute("class","box");
+        var elm5 = document.createElement("div");
+            elm5.textContent="Box5";
+            elm5.setAttribute("class","box");
+       document.getElementsByClassName("container")[0].appendChild(elm1);
+       document.getElementsByClassName("container")[0].appendChild(elm2);
+       document.getElementsByClassName("container")[0].appendChild(elm3);
+       document.getElementsByClassName("container")[0].appendChild(elm4);
+       document.getElementsByClassName("container")[0].appendChild(elm5);
+
+       function deleteFirst(){
+        var elm =  document.getElementsByClassName("container")[0].firstChild;
+        document.getElementsByClassName("container")[0].removeChild(elm)
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digital Clock <span id="clock">00 : 00 : 00</span> </h1>
+    <button onclick="startTimer()">Start Clock</button>
+    <button onclick="stopTimer()">Stop Clock</button>
+    <hr>
+    <button onclick="displayMessage()">Display Message after 5 seconds</button>
+    <button onclick="stopMessage()">Stop Message</button>
+    <h2>Message : <span id="log"></span></h2>
+    <script>
+        var si = null;
+        function startTimer(){
+            si = setInterval(function(){
+                var date = new Date();
+                document.getElementById("clock").innerText = date.getHours() + " : "+ date.getMinutes()+" : "+date.getSeconds() ;
+            },1000);
+        };
+        function stopTimer(){
+            clearInterval(si);
+        };    
+        
+        var st = null;
+        function displayMessage(){
+            st = setTimeout(function(){
+                document.getElementById("log").innerText = "Welcome to your life";
+            },5000);
+        }
+        function stopMessage(){
+            clearTimeout(st);
+        }
+    </script>
+</body>
+</html>

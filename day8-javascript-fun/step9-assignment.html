@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            document.getElementById("log").innerHTML += "body onload <br/>";
+        }
+        function fun2(){
+            document.getElementById("log").innerHTML += "window onload <br/>";
+        };
+        function fun3(){
+            document.getElementById("log").innerHTML += "document DOMContentLoaded <br/>";
+        }
+        function fun4(){
+            console.log("fun4 was called")
+            document.getElementById("log").innerHTML += "document onload <br/>";
+        }
+        window.addEventListener("load", fun2);
+        document.addEventListener("DOMContentLoaded", fun3);
+    </script>
+</head>
+<body onload="fun1()">
+    <h1 id="log"></h1>
+</body>
+</html>
+<!-- 
+
+    create 3 functions call them fun1, fun2 and fun3 
+    call fun1 on body onload 
+    call fun2 on window.addEventListener("load");
+    call fun3 on document.addEventListener("DOMContentLoaded");
+    findout the sequence of execution
+ -->

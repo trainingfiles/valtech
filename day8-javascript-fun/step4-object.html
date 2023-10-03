@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var mywin = null;
+        function openWindow(){
+            mywin = open("step1-fun.html","_blank","left=200,top=200,height=200,width=300");
+        }
+        function closeWindow(){
+            mywin.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openWindow()">Open Step1</button>
+    <button onclick="closeWindow()">Close Step1</button>
+</body>
+</html>
