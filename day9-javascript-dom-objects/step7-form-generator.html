@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  
+    <link rel="stylesheet" href="styles/greybox.css">
+    <link rel="alternate stylesheet" title="greenbox" href="styles/greenbox.css">
+    <link rel="alternate stylesheet" title="redbox" href="styles/redbox.css"> 
+    -->
+    <!-- 
+
+        <div class="mb-3">
+        <label class="form-label">Email address</label>
+        <input type="email" class="form-control">
+        </div>
+
+
+     -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script>
+        function clickHandler(){
+            var inputLable = document.getElementById("inputname").value;
+            var inputType = document.getElementById("inputType").value;
+            var inputRequired = document.getElementById("inputRequire").value;
+            var elm = null;
+            if(inputRequired === "true" ){
+                elm = "<div class='mb-3'><label class='form-label'>"+inputLable+"</label><input required type='"+inputType+"' class='form-control'></div>"
+            }else{
+                elm = "<div class='mb-3'><label class='form-label'>"+inputLable+"</label><input type='"+inputType+"' class='form-control'></div>"
+            }
+            document.getElementsByClassName("form-control")[0].innerHTML += elm;
+        }
+        function init(){
+            document.getElementById("createBtn").addEventListener("click", clickHandler)
+        }
+        document.addEventListener("DOMContentLoaded",init);
+    </script>
+</head>
+<body>
+    <main class="container flex">
+        <div class="box"></div>
+        <label for="inputname">Lable for Input</label>
+        <input id="inputname" type="text">
+        <select name="" id="inputType">
+            <option>Select</option>
+            <option value="text" >Text</option>
+            <option value="password" >Password</option>
+            <option value="number" >Number</option>
+            <option value="email" >eMail</option>
+            <option value="date" >Date</option>
+            <option value="range" >Range</option>
+        </select>
+        <select name="" id="inputRequire">
+            <option>Select</option>
+            <option value="true">Required</option>
+            <option value="false">Not Required</option>
+        </select>
+        <button id="createBtn" class="btn btn-primary">Create Input</button>
+        <form action="" method="get"></form>
+
+        <hr>
+
+        <form action="#" method="get">
+            <div class="form-control"></div>
+            <button type="submit">Submit Form</button>
+        </form>
+      
+    </main><!-- container closing tag  -->
+</body>
+</html>

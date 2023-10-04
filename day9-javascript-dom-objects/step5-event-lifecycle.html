@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            margin: 0px;
+        }
+        .application{
+            width: 800px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: darkolivegreen;
+            margin: 100px auto;
+            
+        }
+        .skincontainer{
+            width: 400px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: darkgrey;
+        }
+        button{
+           width: 200px;
+           height: 40px;
+        }
+    </style>
+    <script>
+       /*   
+        function clickHandler(evt){
+            console.log(evt.currentTarget.getAttribute("class"));
+        }; 
+        function applicationClickHandler(evt){
+            console.log(evt.currentTarget.getAttribute("class"), evt.eventPhase);
+        }; 
+        */
+        function applicationBubbleClickHandler(evt){
+            console.log(evt.currentTarget.getAttribute("class"), evt.eventPhase, "Bubble");
+        }; 
+        function applicationCaptureClickHandler(evt){
+            console.log(evt.currentTarget.getAttribute("class"), evt.eventPhase, "Capture");
+        }; 
+        function skinContainerClickHandler(evt){
+            console.log(evt.currentTarget.getAttribute("class"), evt.eventPhase);
+            // evt.stopPropagation();
+            if(evt.eventPhase === 3){
+                evt.stopPropagation();
+            } 
+        }; 
+        function buttonClickHandler(evt){
+            console.log(evt.currentTarget.getAttribute("class"), evt.eventPhase);
+        }; 
+        function init(){
+            // bubble
+            document.getElementsByClassName("application")[0].addEventListener("click", applicationBubbleClickHandler);
+            // capture
+            document.getElementsByClassName("application")[0].addEventListener("click", applicationCaptureClickHandler, true);
+            // bubble
+            document.getElementsByClassName("skincontainer")[0].addEventListener("click", skinContainerClickHandler);
+            // capture
+            document.getElementsByClassName("skincontainer")[0].addEventListener("click", skinContainerClickHandler, true);
+            // bubble
+            document.getElementsByClassName("button")[0].addEventListener("click", buttonClickHandler);
+        }
+        document.addEventListener("DOMContentLoaded", init);
+
+    </script>
+</head>
+<body>
+    <div class="application">
+        <h2> APPLICATION </h2>
+        <div class="skincontainer">
+            <h2> SKIN CONTAINER </h2>
+            <button class="button">Click Me</button>
+        </div>
+    </div>
+</body>
+</html>

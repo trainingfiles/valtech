@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .application{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width:800px;
+            height:500px;
+            flex-direction: column;
+            background-color: green;
+            margin:100px auto;
+        }
+        .skin-contain{
+            height:200px;
+            width:400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: blueviolet;
+        }
+        button{
+            height:40px;
+            width: 200px;
+            background-color: bisque;
+        }
+    </style>
+    <script>
+      
+        function applicationclickHandler(event){
+            console.log(event.currentTarget.getAttribute("class"),event.eventPhase)
+        };
+        function selfcontainclickHandler(event){
+            console.log(event.currentTarget.getAttribute("class"),event.eventPhase)
+        }
+        function buttonclickHandler(event){
+            console.log(event.currentTarget.getAttribute("class"),event.eventPhase)
+            // if(event.eventPhase===3){
+            //     event.stopPropagation();
+            // }
+        };
+        function init(){
+            document.getElementsByClassName("application")[0].addEventListener("click",applicationclickHandler);
+            document.getElementsByClassName("application")[0].addEventListener("click",applicationclickHandler,true);
+            document.getElementsByClassName("skin-contain")[0].addEventListener("click",selfcontainclickHandler);
+            document.getElementsByClassName("skin-contain")[0].addEventListener("click",selfcontainclickHandler,true);
+            document.getElementsByClassName("button")[0].addEventListener("click",buttonclickHandler);
+        }
+        document.addEventListener("DOMContentLoaded",init)
+    </script>
+</head>
+<body>
+    <div class="application">
+        <h2>Application</h2>
+        <div class="skin-contain">
+            <h2>Skin-Container</h2>
+            <button class="button">Button</button>
+        </div>
+    </div>
+</body>
+</html>

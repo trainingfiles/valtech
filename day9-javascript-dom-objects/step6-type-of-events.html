@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 100px;
+            background-color: crimson;
+            margin: 100px auto;
+        }
+    </style>
+    <script>
+        // window.addEventListener("keydown",eventHandler);
+        window.addEventListener("mousemove",eventHandler);
+        function eventHandler(evt){
+            // console.log("Event Type is ", evt.type);
+            // console.log(evt.key);
+            console.log(evt.clientX, evt.clientY);
+        }
+        function init(){
+            document.getElementsByClassName("container")[0].addEventListener("click", eventHandler);
+            document.getElementsByClassName("container")[0].addEventListener("dblclick", eventHandler);
+            document.getElementsByClassName("container")[0].addEventListener("mousedown", eventHandler);
+            document.getElementsByClassName("container")[0].addEventListener("mouseup", eventHandler);
+            document.getElementsByClassName("container")[0].addEventListener("mouseover", eventHandler);
+            document.getElementsByClassName("container")[0].addEventListener("mouseout", eventHandler);
+            document.getElementsByClassName("container")[0].addEventListener("keyboardevent", eventHandler);
+        };
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        target
+        type
+        currentTarget
+        */
+        function clickHanlder(evt){
+            evt.target.innerText = "clicked"
+        }
+        function init(){
+            for(var i = 0; i < document.getElementsByTagName("ul")[0].children.length; i++){
+                document.getElementsByTagName("li")[i].addEventListener("click", clickHanlder)
+                document.getElementsByTagName("li")[i].addEventListener("mouseover", clickHanlder)
+            }
+        }
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <ul>
+        <li>default</li>
+        <li>default</li>
+        <li>default</li>
+        <li>default</li>
+        <li>default</li>
+        <li>default</li>
+        <li>default</li>
+        <li>default</li>
+        <li>default</li>
+        <li>default</li>
+    </ul>
+</body>
+</html>
