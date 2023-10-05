@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            console.log("innerText",document.querySelector("div").innerText);
+            console.log("+++++++++++++++++++++++++++++++++++++")
+            console.log("textContent",document.querySelector("div").textContent);
+            console.log("+++++++++++++++++++++++++++++++++++++")
+            console.log("innerHTML",document.querySelector("div").innerHTML);
+            console.log("+++++++++++++++++++++++++++++++++++++")
+            console.log("outerHTML",document.querySelector("div").outerHTML);
+            document.querySelector("div").outerHTML = "<h1> there's no turning back </h1>"
+        })
+    </script>
+</head>
+<body>
+    <div>
+        welcome to your <mark>life</mark>
+    </div>
+</body>
+</html>

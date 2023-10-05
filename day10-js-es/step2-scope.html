@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* var hero = {
+            "title" : "Ironman",
+            "power" : 7,
+            "first-name" : "Tony",
+            "movie1" : "Ironman part1",
+            "movie2" : "Ironman part2",
+            "movie3" : "Ironman part3",
+        };
+        // console.log(hero['first-name']);
+        console.log(hero['movie'+(4-2)]); */
+        var hero = {
+            "title" : "Ironman",
+            "power" : 7
+        };
+
+        function checkPower(){
+            if(hero.power > 5){
+               var temptitle = hero.title;
+               hero.title = temptitle+" is strong";
+               console.log('inside block ',temptitle);//???
+            }
+            console.log('outside block ',temptitle);//???
+        };
+        checkPower();
+
+      /*   console.log(hero.title);// ???
+
+
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+        };
+
+        console.log(i,"Out of loop"); */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

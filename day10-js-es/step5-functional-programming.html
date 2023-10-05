@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+       /*  
+        function adder(num1, num2){
+            return num1 + num2;
+        }; 
+        */
+       /*
+       function adder(num1, num2){
+           var tempnum1 = num1 || 0;
+           var tempnum2 = num2 || 0;
+           return tempnum1 + tempnum2;
+        };
+        */
+        // DEFAULT PARAMETERS
+        /*  
+        function adder(num1 = 0, num2 = 0){
+            return num1 + num2;
+        }; 
+        console.log(adder(null,5)); 
+        */
+        
+        /* 
+        function adder(){
+            // return arguments.length;
+            var total = 0;
+            for(let i = 0; i < arguments.length; i++){
+                total += arguments[i];
+            }
+            return total;
+        };  
+        */
+        // REST ARGUMENTS
+        /* 
+        function adder(...nums){
+            var total = 0;
+            for(let i = 0; i < nums.length; i++){
+                total += nums[i];
+            }
+            return total;
+        }; 
+
+        console.log(adder(5)); 
+        console.log(adder(5,6)); 
+        console.log(adder(5,6,7)); 
+        console.log(adder(5,6,7,8)); 
+        console.log(adder(5,6,7,8,9)); 
+        console.log(adder(5,6,7,8,9,10));  
+        */
+
+        /* function adder(compname, city, ...nums){
+            var total = 0;
+            for(let i = 0; i < nums.length; i++){
+                total += nums[i];
+            }
+            return compname+" 's head count at one point was "+total;
+        }; 
+
+        console.log(adder("valtech","bangalore",7,8,9,10));  */
+        // REST 
+        function adder(...nums){
+            var total = 0;
+            for(let i = 0; i < nums.length; i++){
+                total += nums[i];
+            }
+            return total;
+        }; 
+        var favNums = [97,36,62,77,32,15,45,25,20,89,51,7];
+        // SPREAD SYNTAX
+        console.log(adder(...favNums));  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

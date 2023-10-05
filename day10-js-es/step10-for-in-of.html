@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var movies = ['Batman Begins', 'The Dark kinght', 'The Dark Knight Raises'];
+
+        var hero = {
+            title : "Batman",
+            power : 5,
+            firstname : "Bruce",
+            lastname : "Wayne",
+            city : "Gotham"
+        };
+        // for in
+        for(var prop in hero){
+            // console.log(prop.valueOf());
+            console.log(prop,":",hero[prop]);
+        };
+        
+        // for of
+        for(var count of movies){
+            console.log(count);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

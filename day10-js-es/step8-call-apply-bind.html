@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ironman = {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Stark",
+            fullname : function(message, city){
+                return message+" says "+this.firstname+" "+this.lastname+" from "+city;
+            }
+        };
+        var hulk = {
+            title : "Hulk",
+            firstname : "Bruce",
+            lastname : "Benner"
+        };
+        var spiderman = {
+            title : "Spiderman",
+            firstname : "Peter",
+            lastname : "Parker"
+        };
+        var captainamerica = {
+            title : "Captain America",
+            firstname : "Steve",
+            lastname : "Rogers"
+        };
+
+        // console.log(ironman.fullname("I am Ironman", "New York"));
+        // console.log(ironman.fullname.apply(spiderman,"With great powers comes great responsibilities", "New York"));
+        // console.log(ironman.fullname.call(spiderman,["With great powers comes great responsibilities", "New York"]));
+        // console.log(ironman.fullname.apply(spiderman,["With great powers comes great responsibilities", "New York"]));
+        /*         
+        console.log(ironman.fullname.call(spiderman));
+        console.log(ironman.fullname.call(hulk));
+        console.log(ironman.fullname.call(captainamerica)); 
+        */
+        /*
+        console.log(ironman.fullname.apply(spiderman));
+        console.log(ironman.fullname.apply(hulk));
+        console.log(ironman.fullname.apply(captainamerica)); 
+        */
+
+        var hulkfun = ironman.fullname.bind(hulk);
+        /*
+
+
+
+        */
+        console.log(hulkfun("keep calm", "Ohio"));
+        console.log(hulkfun("i am always angry", "Ohio"));
+        console.log(hulkfun("tooddunga", "Ohio"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

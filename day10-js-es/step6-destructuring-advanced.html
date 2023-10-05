@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hero = {
+            title : "Batman",
+            power : 5,
+            firstname : "Bruce",
+            lastname : "Wayne",
+            city : "Gotham",
+            movies : ['Batman Begins', 'The Dark kinght', 'The Dark Knight Raises']
+        };
+
+        /*
+        var temphero = {...hero};
+        console.log(hero.title); 
+        console.log(temphero.title); 
+        temphero.title = "Joker";
+        console.log(temphero.title); 
+        console.log(hero.title); 
+        temphero.movies[0] = "Joker Part 1";
+        console.log(temphero.movies[0]); 
+        console.log(hero.movies[0]); 
+        */
+       
+        var temphero = JSON.parse(JSON.stringify(hero));
+         console.log(temphero.movies[0]); 
+        temphero.movies[0] = "Joker Part 1";
+        console.log(temphero.movies[0]); 
+        console.log(hero.movies[0]); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

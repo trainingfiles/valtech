@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var favNums = [97,36,62,77,32,15,45,25,20,89,51,7];
+        
+        /* 
+        var total = 0;
+
+        for(let i = 0; i < favNums.length; i++){
+            total += favNums[i]
+        };
+
+        console.log(total); 
+        */
+
+        /*
+        favNums.forEach(function(val,idx,arr){
+            console.log(val);
+        });
+        */
+        /* 
+        favNums.forEach(function(val,idx,arr){
+            doubleFavNums.push(val * 2);
+        });
+        */
+        /* 
+        var doubleFavNums = favNums.map(function(val,idx,arr){
+           return val * 2;
+        });
+
+        console.log(favNums);
+        console.log(doubleFavNums); 
+        */
+
+       /*  
+       var lessThan50 = favNums.filter(function(val, idx, arr){
+        return val < 50;
+       }); 
+       */
+      /*
+      var lessThan50 = favNums.filter( val => val < 50 );
+      
+      var greaterThan50 = favNums.filter(function(val, idx, arr){
+          return val > 50;
+        });
+        
+        console.log(lessThan50);
+        console.log(greaterThan50);
+        */
+        /* 
+        var allValsLessThan50 = favNums.every(val => {
+            console.log(val);
+            return val < 50
+        });
+
+        console.log(allValsLessThan50); 
+        */
+       /*
+       var someValsLessThan50 = favNums.some(val => {
+           console.log(val);
+           return val < 50
+        });
+        console.log(someValsLessThan50);
+        */
+
+        // REDUCE
+      /*   var total = favNums.reduce(function(initval, val, idx, arr){
+            return initval + val;
+        }, 0); */
+        // var total = favNums.reduce((initval, val) =>  initval + val, 0);
+        // var total = favNums.reduce((initval, val) =>  initval + val, 0);
+        /* 
+        var total = favNums.reduceRight((initval, val) =>  initval + val, 0);
+        console.log(total);
+         */
+
+         Array.prototype.valtech = function(){
+            return this.length+" elemnts in this array";
+         } 
+         console.log( favNums.valtech() );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

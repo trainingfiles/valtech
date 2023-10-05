@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // PROBLEM
+        /* 
+        var cart = {
+            title : "Valtech Cart",
+            getCostPrice : function(){
+                return 100
+            },
+            getSellingPrice : function(){
+                var calculateProfit = function(){
+                   return this.getCostPrice() * 0.2;
+                };
+ 
+                return this.getCostPrice()+calculateProfit();
+            }
+        }; 
+        */
+       /*
+       var cart = {
+           title : "Valtech Cart",
+            getCostPrice : function(){
+                return 100
+            },
+            getSellingPrice : function(){
+                var calculateProfit = function(anything){
+                    return anything.getCostPrice() * 0.2;
+                };
+                
+                return this.getCostPrice()+calculateProfit(this);
+            }
+        };
+        console.log(cart.getSellingPrice());// 120 
+        */
+       /*
+       var cart = {
+           title : "Valtech Cart",
+           getCostPrice : function(){
+               return 100
+            },
+            getSellingPrice : function(){
+                var scope = this;
+                var calculateProfit = function(){
+                    return scope.getCostPrice() * 0.2;
+                };
+                
+                return this.getCostPrice()+calculateProfit();
+            }
+        };
+        console.log(cart.getSellingPrice());// 120 
+        */
+       /*
+       var cart = {
+           title : "Valtech Cart",
+           getCostPrice : function(){
+               return 100
+            },
+            getSellingPrice : function(){
+                var calculateProfit = function(){
+                    return this.getCostPrice() * 0.2;
+                };
+                
+                return this.getCostPrice()+calculateProfit.call(this);
+            }
+        };
+        console.log(cart.getSellingPrice());// 120 
+        */
+       /*
+       var cart = {
+           title : "Valtech Cart",
+           getCostPrice : function(){
+               return 100
+            },
+            getSellingPrice : function(){
+                var calculateProfit = function(){
+                    return this.getCostPrice() * 0.2;
+                };
+                
+                return this.getCostPrice()+calculateProfit.apply(this);
+            }
+        };
+        console.log(cart.getSellingPrice());// 120 
+        */
+       /*
+       var cart = {
+           title : "Valtech Cart",
+           getCostPrice : function(){
+               return 100
+            },
+            getSellingPrice : function(){
+                var calculateProfit = function(){
+                    return this.getCostPrice() * 0.2;
+                };
+                
+                return this.getCostPrice()+calculateProfit.bind(this)();
+            }
+        };
+        console.log(cart.getSellingPrice());// 120 
+        */
+       var cart = {
+           title : "Valtech Cart",
+           getCostPrice : function(){
+               return 100
+            },
+            getSellingPrice : function(){
+                var calculateProfit = () => {
+                    return this.getCostPrice() * 0.2;
+                };
+                
+                return this.getCostPrice()+calculateProfit.bind(this)();
+            }
+        };
+        console.log(cart.getSellingPrice());// 120 
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!-- 
+    http://p.ip.fi/cHYV
+ -->
