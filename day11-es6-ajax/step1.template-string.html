@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 640px;
+            height: 400px;
+            background-color: grey;
+            border: 1px solid black;
+            padding: 10px;
+            margin : 50px auto;
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap : 5px
+        }
+        .box{
+            flex-basis: 150px;
+            height: 220px;
+            background-color: darkslategray;
+            text-align: center;
+            font-family: sans-serif;
+            color: aliceblue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content : center;
+        }
+        .box h3{
+            margin: 0px;
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+        .box img{
+            max-width: 100%;
+            align-self: flex-end;
+        }
+        .box:hover{
+            background-color: rgb(71, 119, 119);
+            cursor: pointer;
+            box-shadow: 5px 5px 5px black;
+        }
+    </style>
+    <script>
+        function clickHandler(evt){
+            if(evt.target.parentElement.getAttribute("class")==="box"){
+                console.log(evt.target.parentElement.getAttribute("data-title"));
+                var elm = document.createElement("li");
+                elm.innerText = evt.target.parentElement.getAttribute("data-title")+" | "+evt.target.parentElement.getAttribute("data-units")+" | INR "+evt.target.parentElement.getAttribute("data-price");
+                document.getElementById("cart").appendChild(elm);
+                document.getElementsByClassName("container")[0].removeChild(evt.target.parentElement);
+            }else{
+                alert("select a hero")
+            }
+        }
+        var avengers = [
+            { title : "Ironman", poster : "images/ironman.jpg", units : 10, price: 140  },
+            { title : "Hulk", poster : "images/hulk.jpg", units : 10, price: 140  },
+            { title : "Captain America", poster : "images/captainamerica.jpg", units : 10, price: 140  },
+            { title : "Thor", poster : "images/thor.jpg", units : 10, price: 140  },
+            { title : "Black Panther", poster : "images/blackpanther.jpg", units : 10, price: 140  },
+            { title : "Black Widow", poster : "images/blackwidow.jpg", units : 10, price: 140  },
+            { title : "Scarlet Witch", poster : "images/scarletwitch.jpg", units : 10, price: 140  },
+            { title : "Antman", poster : "images/antman.jpg", units : 10, price: 140  },
+            { title : "Hawkeye", poster : "images/hawkeye.jpg", units : 10, price: 140  },
+            { title : "Falcon", poster : "images/falcon.jpg", units : 10, price: 140  },
+            { title : "Dr Strange", poster : "images/doctorstrange.jpg", units : 10, price: 140  },
+            { title : "Captain Marvel", poster : "images/captainmarvel.jpg", units : 10, price: 140  },
+            { title : "Spiderman", poster : "images/spiderman.jpg", units : 10, price: 140  }
+        ];
+        function init(){
+          avengers.forEach( val => {
+            // document.getElementsByClassName("container")[0].innerHTML += "<div class='box' data-price='"+val.price+"' data-units='"+val.units+"' data-title='"+val.title+"'> <h2>"+val.title+"</h2> <img src='"+val.poster+"' alt='"+val.title+"'> </div>";
+            document.getElementsByClassName("container")[0].innerHTML += `
+            <div class="box" data-price="${val.price}" data-units="${val.units}" data-title="${val.title}"> 
+                <h3>${val.title.toUpperCase()}</h3> 
+                <img src="${val.poster}" alt="${val.title}"> 
+            </div>
+            `;
+          });
+          document.getElementsByClassName("container")[0].addEventListener("click",clickHandler)
+        }
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <main>
+        <div class="container"></div>
+       <div class="cart">
+            <h3>Cart</h3>
+            <ol id="cart"></ol>
+       </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--     
+    <script src="modules/adder.js"></script>
+    <script>
+        if(adder){
+            console.log("Adder is found");
+        }else{
+            console.log("Adder is not found");
+        }
+    </script> 
+    -->
+    <script type="module">
+        /* import what from where */
+        // import {adder} from "./modules/adder.js";
+        import valtech, { multiplier } from "./modules/adder.js";
+
+        console.log(valtech(5,6));// ??? 
+        console.log(multiplier(5,6));// ??? 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

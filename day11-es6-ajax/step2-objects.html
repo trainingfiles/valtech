@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        var obj1 = {};
+        var obj2 = new Object();
+        var obj3 = Object.create(null);
+        console.log(typeof obj1, typeof obj2, typeof obj3);
+        */
+        /*        
+        var person = {};
+           person.canwalk = "i can walk"; 
+        */
+       var hero = Object.create(null);
+       Object.defineProperty(hero, "title", { value : "Ironman", writable : true, configurable : true });
+       Object.defineProperty(hero, "titleAccess", {
+        get : function(){
+            return this.title;
+        },
+        set : function(ntitle){
+            this.title = ntitle;
+        }
+       });
+       console.log(hero.titleAccess);
+       hero.titleAccess = "Iron Monger";
+       console.log(hero.titleAccess);
+       
+        for(let prop in hero){
+           console.log(prop);
+        };
+        
+       /*  Object.defineProperty(hero, "title", { value : "Ironman", writable : false, enumerable : false });
+        hero.title = "Ironmonger";
+        console.log(hero.title);
+        
+        for(let prop in hero){
+            console.log(prop);
+         }; */
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

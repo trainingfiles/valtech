@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        inherit 
+            subclass
+
+        properties
+            private
+                getter 
+                setter 
+            public 
+            static 
+
+        methods
+            private 
+            public 
+            static 
+
+        constructor
+            super
+
+        */
+       class Person{
+        canwalk = "default";
+        constructor(hcw){
+            this.canwalk = hcw;
+        }
+       }
+        class Hero extends Person{
+            // public 
+            title = "default";
+            firstname = "default";
+            lastname = "default";
+            power = 0;
+            // private 
+            #mission = "my secret mission";
+            // static
+            static version = 101
+            //--------------------------------
+            constructor(htitle, hfname, hlname, hpower, hcw){
+                super(hcw)
+                this.title = htitle;
+                this.firstname = hfname;
+                this.lastname = hlname;
+                this.power = hpower;
+            }
+            // method
+            fullname(){
+                return this.firstname+' '+this.lastname;
+            }
+            get mission(){
+                return this.#mission;
+            }
+            set mission(nmission){
+                this.#mission = nmission;
+            }
+
+            #checkPower(){
+                if(this.power < 6){
+                    console.log("power is less")
+                }else{
+                    console.log("hero ready to fight")
+                }
+            }
+
+        };
+
+        var hero = new Hero("Phantom","Kit","Walker",7,"I can ride");
+        console.log(hero.title);
+        console.log(hero.firstname);
+        console.log(hero.lastname);
+        console.log(hero.mission);// getter
+        hero.mission = "save the world"; // setter
+        console.log(hero.fullname());
+        console.log(hero.mission);// getter
+        console.log(Hero.version);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

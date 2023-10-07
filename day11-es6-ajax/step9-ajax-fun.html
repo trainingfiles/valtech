@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 400px;
+            background-color: silver;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: justify;
+            font-family: sans-serif;
+            margin: 100px auto;
+            overflow: auto;
+        }
+    </style>
+    <script>
+        var xhr = new XMLHttpRequest();
+        function changeHandler(evt){
+           //  console.log(xhr.readyState);
+           // console.log(evt.target.readyState);
+            if(evt.target.status === 200 && evt.target.readyState === 4){
+                document.getElementsByClassName("container")[0].textContent = evt.target.responseText;
+            }else{
+                document.getElementsByClassName("container")[0].textContent = "...loading "
+            }
+        }
+        xhr.addEventListener("readystatechange", changeHandler);
+
+        document.addEventListener("DOMContentLoaded", function(){
+            xhr.open("get","data/data.txt",true);
+            xhr.send();
+        })
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
+
+

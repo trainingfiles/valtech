@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var firstpromise = function(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("response from the first promise");
+                    }else{
+                        reject("error from the first promise");
+                    }
+                },100)
+            })
+        };
+        var secondpromise = function(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    if(false){
+                        resolve("response from the second promise");
+                    }else{
+                        reject("error from the second promise");
+                    }
+                },500)
+            })
+        };
+        var thirdpromise = function(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("response from the third promise");
+                    }else{
+                        reject("error from the third promise");
+                    }
+                },3000)
+            })
+        };
+
+/* 
+all promises to resolve 
+any promises to resolve 
+race resolve or reject which ever happens first
+all settled 
+*/
+
+/* 
+Promise.all([firstpromise(),secondpromise(),thirdpromise()])
+.then(function(res){
+    console.log("Result", res)
+})
+.catch(function(err){
+    console.log("Error", err)
+})
+.finally(function(){
+    console.log("All Promises are done")
+})
+ */
+/*  
+Promise.any([firstpromise(),secondpromise(),thirdpromise()])
+.then(function(res){
+    console.log("Result", res)
+})
+.catch(function(err){
+    console.log("Error", err)
+})
+.finally(function(){
+    console.log("All Promises are done")
+}) 
+*/
+
+Promise.allSettled([firstpromise(),secondpromise(),thirdpromise()])
+.then(function(res){
+    console.log("Result", res)
+})
+.catch(function(err){
+    console.log("Error", err)
+})
+.finally(function(){
+    console.log("All Promises are done")
+})
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!-- 
+
+    http://p.ip.fi/xiVD
+
+
+ -->

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        import { Hero } from "./modules/hero.js";
+
+        var hero = new Hero("Phantom","Kit","Walker",7,"I can ride");
+        console.log(hero.title);
+        console.log(hero.firstname);
+        console.log(hero.lastname);
+        console.log(hero.mission);// getter
+        hero.mission = "save the world"; // setter
+        console.log(hero.fullname());
+        console.log(hero.mission);// getter
+        console.log(Hero.version);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
