@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.7.1.js"></script>
+    <style>
+        .box{
+            background-color: crimson;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            color: papayawhip;
+            text-align: center;
+            line-height: 100px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        article{
+            border: 3px solid red;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        $(()=>{
+           // $("article").append("Welcome to your life, there's no turning back, even while you sleep we will find you acting on your best behaviour")
+           // $("article").prepend("Welcome to your life, there's no turning back, even while you sleep we will find you acting on your best behaviour")
+           // $("article").first().appendTo($("article").last());
+           // $("article").first().prependTo($("article").last());
+           // $("article:first").after("welcome to your life !!!")
+           // $(".box").insertAfter("article:last");
+           // $(".box").insertBefore("article:last");
+        })
+    </script>
+</head>
+<body>
+    <div class="box">I am Box</div>
+    <section>
+
+        <article>
+            First Article <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatum aliquid vitae! In, magnam! Temporibus, saepe rerum accusantium placeat tempora eligendi eveniet obcaecati eius quae! Aliquam nesciunt libero eos nemo.
+            ??? 
+        </article>
+        <article>
+            Second Article <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatum aliquid vitae! In, magnam! Temporibus, saepe rerum accusantium placeat tempora eligendi eveniet obcaecati eius quae! Aliquam nesciunt libero eos nemo.
+        </article>
+        <article>
+            Third Article <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatum aliquid vitae! In, magnam! Temporibus, saepe rerum accusantium placeat tempora eligendi eveniet obcaecati eius quae! Aliquam nesciunt libero eos nemo.
+        </article>
+    </section>
+</body>
+</html>
