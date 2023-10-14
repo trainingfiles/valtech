@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Hello from EJS Template Engine</h1>
+        <h2> <%= company %> </h2>
+        <form action="#" method="post">
+            <label for="nhero">Add Avenger : </label>
+            <input required id="nhero" name="valtechhero">
+            <button class="btn btn-primary" type="submit">Add Hero</button>
+        </form>
+        <hr>
+        <ul>
+            <% avengers.forEach((hero) => { %>
+                <li> <%= hero %> </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>
+
