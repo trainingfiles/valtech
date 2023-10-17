@@ -1,0 +1,6 @@
+mongodb+srv://admin:RVcPYpfBrs03sn37@cluster0.ozziwxj.mongodb.net/?retryWrites=true&w=majority
+
+
+
+register.pug
+http://p.ip.fi/ZnrR

@@ -1,0 +1,26 @@
+extends template.pug
+block content
+    h1 #{title}
+    if error
+        h2 #{ error }
+    if message
+        h2 #{ message }
+    ul
+        li
+            a(href="/") Home  
+    hr
+    form(action="#" method="post") 
+        div(class="mb-3")
+            label(for="fname" class="form-label") First Name
+            input(type="text" name="fname" class="form-control" id="fname")
+        div(class="mb-3")
+            label(for="lname" class="form-label") Last Name
+            input(type="text" name="lname" class="form-control" id="lname")
+        div(class="mb-3")
+            label(for="email" class="form-label") eMail
+            input(type="email" name="email" class="form-control" id="email")
+        div(class="mb-3")
+            label(for="password" class="form-label") Password
+            input(type="password" name="password" class="form-control" id="password")
+        div(class="mb-3")
+            input(type="submit" class="btn btn-primary" value="Register") 
