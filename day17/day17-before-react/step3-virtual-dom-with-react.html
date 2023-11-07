@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+        h1:lang(fr){
+            background-color: crimson;
+            color: papayawhip;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // Avengers 
+        let avengers = ["Ironman","Hulk", "Thor", "Spiderman"];
+        // Justice League 
+        let justiceleague = ["Batman","Wonder Women", "Superman", "Flash"];
+        // REACT ELEMENT
+        let comp = function(heroes){
+            let templist = heroes.map(function(val,idx,arr){
+                return React.createElement("li",null,val);
+            })
+            return React.createElement("ol",null,templist);
+        };
+        document.addEventListener("DOMContentLoaded",function(){
+            ReactDOM.createRoot(document.getElementById("root")).render([comp(avengers), comp(justiceleague)]);
+        })
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

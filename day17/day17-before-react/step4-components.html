@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        h1:lang(fr){
+            background-color: crimson;
+            color: papayawhip;
+            text-align: center;
+        }
+    </style>
+    <script type="text/babel">
+        // Avengers 
+        let avengers = ["Ironman","Hulk", "Thor", "Spiderman"];
+        // Justice League 
+        let justiceleague = ["Batman","Wonder Women", "Superman", "Flash"];
+        // REACT ELEMENT
+        /* let comp = function(heroes){
+            let templist = heroes.map(function(val,idx,arr){
+                return React.createElement("li",null,val);
+            })
+            return React.createElement("ol",null,templist);
+        }; */
+
+        /*
+        let comp1 = React.createElement("ul",null,
+        React.createElement("li", null, "Ironman"),
+        React.createElement("li", null, "Hulk"),
+        React.createElement("li", null, "Thor"),
+        React.createElement("li", null, "Spiderman"),
+        )
+        */
+        
+        /* 
+            
+        */
+        // class based component
+       /*  class FirstComp extends Component{
+            render(){
+                return React.createElement("h1",null, "Welcome to your life");
+            }
+        } */
+        // element
+      // Class Component
+        /* class FirstComp extends React.Component{
+            avengers = ["Ironman","Hulk", "Thor", "Spiderman", "Ironman"];
+            render(){
+                return <ul>{ this.avengers.map( (val, idx) => <li key={idx}>{ val }</li> )}</ul> 
+            }
+        } */
+
+        // Function Component
+        let secondComp = function(){
+            let avengers = ["Ironman","Hulk", "Thor", "Spiderman", "Ironman"];
+            return <ul>{ avengers.map( (val, idx) => <li key={idx}>{ val }</li> )}</ul> 
+        }
+       
+        // let list = React.createElement("li", null, "Ironman ", 5+6, " is the new power ", 5+5, " was the old power");
+        // document.addEventListener("DOMContentLoaded", function(){
+            ReactDOM.createRoot(document.getElementById("root")).render(<secondComp/>);
+        // })
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    
+</body>
+</html>
+
+<!-- 
+
+    http://p.ip.fi/--DG
+
+
+ -->

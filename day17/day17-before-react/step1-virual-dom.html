@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1:lang(fr){
+            background-color: crimson;
+            color: papayawhip;
+            text-align: center;
+        }
+    </style>
+    <script>
+        let comp = document.createElement("h1");
+        comp.setAttribute("lang","fr");
+        comp.innerText = "Welcome to your life";
+        
+        document.addEventListener("DOMContentLoaded",function(){
+            // document.body.appendChild(comp);
+            // document.querySelector("#root").appendChild(comp);
+            // document.querySelectorAll("#root")[0].appendChild(comp);
+            document.getElementById("root").appendChild(comp);
+        })
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
