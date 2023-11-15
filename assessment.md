@@ -24,5 +24,5 @@
 ## React with Redux Assessment 
 <details>
   <summary>Click to open the Assessment link</summary>
-  <a href="[https://forms.gle/5WgaHYw5LXg1ijPu5](https://docs.google.com/forms/d/e/1FAIpQLSej59zfDjBNzB5m-BbGWkojz4jbAP2WFcIbhdY2zp30S9n2UQ/viewform?usp=sf_link)https://docs.google.com/forms/d/e/1FAIpQLSej59zfDjBNzB5m-BbGWkojz4jbAP2WFcIbhdY2zp30S9n2UQ/viewform?usp=sf_link">React with Redux and Routing - Assessment Link </a>
+  <a href="https://forms.gle/rkP7CR9RvPg2uQ7cA">React with Redux and Routing - Assessment Link </a>
 </details>
