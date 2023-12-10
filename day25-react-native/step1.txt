@@ -1,0 +1,57 @@
+import { Pressable, ScrollView } from "react-native";
+import { ImageBackground, Touchable, TouchableHighlight, TouchableOpacity, TouchableWithoutFeedback } from "react-native";
+import { View, SafeAreaView, Text, StatusBar, Dimensions, Button, Image } from "react-native";
+
+const Hline = ({col})=>{
+  return <View style={ { borderBottomWidth : 1, borderBottomColor : col, width : Dimensions.get("screen").width, marginBottom : 10, marginTop : 10 }}></View>
+}
+
+export default app = () => {
+  const handleEvent = (comp,type) => {
+    console.log(comp," was ",type)
+  }
+  return <SafeAreaView>
+          <View>
+            <StatusBar/>
+            <ScrollView>
+            <Text style={ {fontWeight : "bold", textAlign : "center"} }>Button / Touchables / Pressable</Text>
+            <Hline col={'black'}/>
+            <Button onPress={() => handleEvent("Button","pressed")} title="Click Me I am a Button"/>
+            <Hline col={'silver'}/>
+            <Text style={ {textAlign:"center"} }>Touchable without feedback accepts a single element</Text>
+            <TouchableWithoutFeedback onPress={()=> handleEvent("TouchableWithoutFeedback", "Pressed")} >
+              <ImageBackground style={ { display : "flex", alignSelf: "center",  width : 150, height : 150 } } source={require("./assets/images/antman.jpg")}>
+              <Text style={ {textAlign:"center", backgroundColor : 'white', opacity : 0.7, fontWeight : "bold"} } >Antman</Text>
+              </ImageBackground>
+            </TouchableWithoutFeedback>
+            <Hline col={'silver'}/>
+            <Text style={ {textAlign:"center"} }>Touchable Highlight</Text>
+            <TouchableHighlight onPress={()=> handleEvent("TouchableHighlight", "Pressed")} >
+              <View>
+                <ImageBackground style={ { display : "flex", alignSelf: "center",  width : 150, height : 150 } } source={require("./assets/images/thor.jpg")}>
+                 <Text style={ {textAlign:"center", backgroundColor : 'white', opacity : 0.7, fontWeight : "bold"} } >Thor</Text>
+                </ImageBackground>
+              </View>
+            </TouchableHighlight>
+            <Hline col={'silver'}/>
+            <Text style={ {textAlign:"center"} }>Touchable Opacity</Text>
+            <TouchableOpacity onPress={()=> handleEvent("TouchableOpacity", "Pressed")} >
+              <View>
+                <ImageBackground style={ { display : "flex", alignSelf: "center",  width : 150, height : 150 } } source={require("./assets/images/doctorstrange.jpg")}>
+                 <Text style={ {textAlign:"center", backgroundColor : 'white', opacity : 0.7, fontWeight : "bold"} } >Doctor Strange</Text>
+                </ImageBackground>
+              </View>
+            </TouchableOpacity>
+            <Hline col={'silver'}/>
+            <Text style={ {textAlign:"center"} }>Pressable</Text>
+            <Pressable onPress={()=> handleEvent("Pressable", "Pressed")} >
+              <View>
+                <ImageBackground style={ { display : "flex", alignSelf: "center",  width : 150, height : 150 } } source={require("./assets/images/hulk.jpg")}>
+                 <Text style={ {textAlign:"center", backgroundColor : 'white', opacity : 0.7, fontWeight : "bold"} } >Hulk</Text>
+                </ImageBackground>
+              </View>
+            </Pressable>
+            </ScrollView>
+          </View>
+        </SafeAreaView>
+}
