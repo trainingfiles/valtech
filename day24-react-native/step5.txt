@@ -1,0 +1,14 @@
+import { useState } from "react"
+import {  Text, View } from "react-native"
+/* https://coolors.co/palettes/trending */
+export default app = () => {
+  let [col, changeCol] = useState('orange');
+  let [message, changeMessage] = useState('click me to change message');
+  return <View style={ { backgroundColor : "silver", flex : 1, paddingTop: 30} }>
+    <Text style={ {color : 'blue', marginLeft : 20 } }>Welcome to your <Text style={ { color : "red" } }> Life </Text></Text>
+    <Text onPress={ () => console.log('pressed') }> Press me to Log </Text>
+    <Text style={ {color:col} } onPress={ () => changeCol('#'+Math.floor(Math.random()*16777247).toString(16) ) }> Press Me to change color </Text>
+    <Text onPress={ () => changeMessage('welcome to your life') }> { message } </Text>
+    <Text onPress={ (event) => event.target.value == 'pressed' }> Click Me </Text>
+  </View>
+}
