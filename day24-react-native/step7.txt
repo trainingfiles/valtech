@@ -1,0 +1,12 @@
+import { ScrollView, Text, View } from "react-native";
+/* demo with scrollView outside the title and inside the title */
+export default app = () => {
+  return <View style={ { backgroundColor : "#a3a3a3", flex : 1, paddingTop: 30} }>
+          <Text style={ { fontSize : 30, textAlign : "center" } }>Welcome to your life</Text>
+          <ScrollView>
+          <Text style={ { padding : 20, textAlign : "justify" } }>
+            Lorem lots of text
+          </Text>
+          </ScrollView>
+        </View>
+}
