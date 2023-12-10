@@ -1,0 +1,17 @@
+## Steps to load custom fonts 
+download and copy the font to assets/fonts directory
+
+install this
+npx expo install expo-font
+import this
+import { useFonts } from 'expo-font';
+
+declare in the component 
+let [fontsLoaded] = useFonts({
+   'RobotoCondensed-Medium' : require("./assets/fonts/RobotoCondensed-Medium.ttf")
+});
+
+use this in the template jsx 
+{ fontsLoaded ? <Text style={ {fontFamily : 'RobotoCondensed-Medium', fontSize:20, padding : 10} }>
+Place holder text comes here.Place holder text comes here.Place holder text comes here.Place holder text comes here.
+</Text> : <Text>Font not loaded</Text> }
