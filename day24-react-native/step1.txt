@@ -1,0 +1,10 @@
+import { SafeAreaView, Text, View } from "react-native"
+
+export default app = () => {
+  return <SafeAreaView>
+	<View style={ { backgroundColor : "crimson"} }>
+      <Text>Welcome to your life</Text> 
+	</View>
+    </SafeAreaView>
+ 
+}
