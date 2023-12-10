@@ -1,0 +1,35 @@
+import { useState } from "react";
+import { Alert, Button, Dimensions, SafeAreaView, StatusBar, Switch, Text, View } from "react-native";
+
+const Hline = ({col})=>{
+  return <View style={ { borderBottomWidth : 1, borderBottomColor : col, width : Dimensions.get("screen").width, marginBottom : 10, marginTop : 10 }}></View>
+}
+
+export default app = () => {
+  let [show, setShow] = useState(false);
+  let [message, setMessage] = useState("")
+
+  let pressHandler = () => {
+    console.log("you clicked the button");
+    Alert.alert("Alert Title Comes Here", "Did you get it.",[
+      { text : "Yes", onPress : () => setMessage("you said yes")  },
+      { text : "No", onPress : () => setMessage("you said no")  },
+    ])
+  }
+  return <SafeAreaView>
+          <View>
+            <StatusBar/>
+            <Text style={ {fontWeight : "bold", textAlign : "center"} }>Alert</Text>
+            <Hline col={'black'}/>
+            <View style={{  flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+              <Text>Enable / Disable</Text>
+              <Switch title="Show / Hide"  value={show} onChange={() => setShow(!show) }/>
+            </View>
+            <Button disabled={show} onPress={pressHandler} title="Click Me I am a Button"/>
+            { 
+            message.length > 0 && 
+            <Text onPress={()=>setMessage('')} style={ {marginTop : 10,  fontSize : 16, textAlign : "center" } }> { `Press to clear the message : ${message}`  }</Text>
+            }
+          </View>
+        </SafeAreaView>
+}
