@@ -1,0 +1,30 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useFonts } from "expo-font";
+import { Image, ScrollView, Text, View } from 'react-native';
+
+export default function App() {
+  let [userlist,setData] = useState([])
+ // let data = {"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+let [fontsLoaded] = useFonts({
+  "Whisper" : require("./assets/fonts/Whisper-Regular.ttf")
+}) 
+ useEffect(()=>{
+    console.log("app was loaded")
+    axios.get("https://reqres.in/api/users?page=1")
+    .then( res => {
+      setData(res.data.data);
+      console.log(res.data);
+    })
+    .catch(err => console.log("Error ", err))
+  },[]);
+  return <View>
+    <ScrollView>
+         { userlist && userlist.map((val)=> <View style={{width : 250, height : 240, backgroundColor : val.id % 2 ? "rgba(255,0,0,0.2)" : 'rgba(0,0,255,0.2)', padding : 10, margin : 10, borderRadius : 30, borderTopColor : 'black', borderTopWidth : 30 }} key={val.id}>
+                                    { fontsLoaded ? <Text style={ {fontFamily : 'Whisper', fontSize : 30} }>{ val.first_name + " " + val.last_name }</Text> : <Text>Font Not Loaded</Text>}
+                                    <Image style={ {width : 100, height : 100 } } source={ { uri : val.avatar }}/>
+                                    <Text>{ val.email }</Text>
+                                  </View> )}
+    </ScrollView>
+         </View>;
+}
