@@ -1,0 +1,60 @@
+import { useDeviceOrientation } from "@react-native-community/hooks";
+import { Dimensions, Platform, StatusBar, SafeAreaView, StyleSheet, Text, View, ScrollView, useWindowDimensions } from "react-native";
+
+const Hline = ({col})=>{
+  return <View style={ [styles.hline, {borderBottomColor : col}] }></View>
+}
+
+const styles = StyleSheet.create({
+  title : { 
+    fontWeight : "bold", 
+    textAlign : "center",
+    fontSize : 18
+  },
+  hline : { 
+    borderBottomWidth : 1, 
+    borderBottomColor : 'black', 
+    width : Dimensions.get("screen").width, 
+    marginBottom : 10, 
+    marginTop : 10 
+  }
+})
+
+export default app = () => {
+  let dim = useWindowDimensions();
+  let deviO = useDeviceOrientation();
+  return <SafeAreaView>
+          <ScrollView>
+          <View style={ { padding : StatusBar.currentHeight } }>
+            <Text style={styles.title}>Platform / Dimensions / StatusBar </Text>
+            <Hline col={'blue'}/>
+            <Text style={{ fontWeight : 'bold' }}>Platform</Text>
+            <Text>OS Type :  {Platform.OS}</Text>
+            <Text>Version Number : {Platform.Version }</Text>
+            <Text>is this TV ? : {Platform.isTV ? "Yes" : "No" }</Text>
+            <Text>Brand {Platform.constants.Brand }</Text>
+            <Text>Fingerprint {Platform.constants.Fingerprint }</Text>
+            <Text>Model {Platform.constants.Model }</Text>
+            <Text>Release {Platform.constants.Release }</Text>
+            <Text>uiMode  {Platform.constants.uiMode  }</Text>
+            <Hline col={'red'}/>
+            <Text style={{ fontWeight : 'bold' }}>Dimensions </Text>
+            <Text>Screen fontScale  {Dimensions.get("screen").fontScale  }</Text>
+            <Text>Screen Scale  {Dimensions.get("screen").scale  }</Text>
+            <Text>Screen Width  {Dimensions.get("screen").width  }</Text>
+            <Text>Screen Height  {Dimensions.get("screen").height  }</Text>
+            <Text>Window fontScale  {Dimensions.get("window").fontScale  }</Text>
+            <Text>Window Scale  {Dimensions.get("window").scale  }</Text>
+            <Text>Window Width  {Dimensions.get("window").width  }</Text>
+            <Text>Window Height  {Dimensions.get("window").height  }</Text>
+            <Hline col={'red'}/>
+            <Text style={{ fontWeight : 'bold' }}>Dimensions </Text>
+            <Text>Window Dimensions Height  { dim.height  }</Text>
+            <Text>Window Dimensions Width  { dim.width  }</Text>
+            <Hline col={'red'}/>
+            <Text style={{ fontWeight : 'bold' }}>Orientation </Text>
+            <Text>Screen Orientation  { deviO }</Text>
+          </View>
+          </ScrollView>
+        </SafeAreaView>
+}
