@@ -1,0 +1,20 @@
+Orientation ex:
+
+import { useDeviceOrientation } from '@react-native-community/hooks';
+import { StyleSheet, Text, View, useWindowDimensions } from 'react-native';
+
+
+const styles = StyleSheet.create({
+  box : { width : 200, height : 400, backgroundColor : "silver" }
+})
+
+export default function App() {
+  let orientation = useDeviceOrientation();
+  let dimension = useWindowDimensions()
+  return <View style={ {display : 'flex', alignItems : "center", justifyContent : "center", height : dimension.height } }>
+            <View style={[styles.box, {backgroundColor : orientation === "landscape" ? "green" : "red",  }]}>
+              <Text style={ {textAlign : 'center', fontSize : 20,fontWeight : "bold", color : "white" } }>{orientation}</Text>
+            </View>
+         </View>;
+}
+
