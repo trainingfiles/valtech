@@ -1,0 +1,43 @@
+all units are measured in DIPs : Density Independent Pixels 
+Physical Pixel = DIPs x Scale Factor of the device 
+sizes can also be in percentage as string or numbers
+screen represents the entire screen
+window represents the visible area of an application 
+they both are the same on ios, but on android they can be different 
+
+a normal js object would not detech misspellet property and values you can override them too.
+create a styles like this 
+
+const styles = StyleSheet.create({
+  title : { 
+    fontWeight : "bold", 
+    textAlign : "center",
+    fontSize : 18
+  },
+  switch : {  
+    flexDirection: "row", 
+    justifyContent: "center", 
+    alignItems: "center" 
+  },
+  message : { 
+    marginTop : 10,  
+    fontSize : 16, 
+    textAlign : "center" 
+  },
+  hline : { 
+    borderBottomWidth : 1, 
+    borderBottomColor : 'black', 
+    width : Dimensions.get("screen").width, 
+    marginBottom : 10, 
+    marginTop : 10 
+  }
+});
+add it like this 
+<Text style={styles.title}>Alert</Text>
+
+you can override like this
+
+const Hline = ({col})=>{
+  return <View style={ {...styles.hline, borderBottomColor : col} }></View>
+  // return <View style={ [styles.hline, {borderBottomColor : col}] }></View>
+}
