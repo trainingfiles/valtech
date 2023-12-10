@@ -1,0 +1,25 @@
+import { Image, ImageBackground, Text, View } from "react-native";
+const ironman = require("./assets/images/ironman.jpg");
+const spiderman = require("./assets/images/spiderman.jpg");
+const antman = require("./assets/images/antman.jpg");
+const bg6 = require("./assets/images/6.jpg");
+
+export default app = () => {
+  return <View style={ { backgroundColor : "#a3a3a3", flex : 1, paddingTop: 30} }>
+          <Text>Welcome to your life</Text>
+          {/* inline photo this image will be bundled with your app */}
+          <Image source={ require("./assets/images/rajani.jpg")}/>
+          {/* inline photo for multiple use this image will be bundled with your app  */}
+          <Image source={ironman}  style={ { width : 150, height : 150 } } />
+{/*           <Image source={spiderman}  style={ { width : 150, height : 150 } } />
+          <Image source={antman}  style={ { width : 150, height : 150 } } /> */}
+          {/* network photo */}
+          <Image source={ {uri : "https://nordicwalking.in/wp-content/uploads/2023/01/nordic-walking-india.jpg"} }  style={ { width : 350, height : 250 } } />
+          <ImageBackground source={ bg6 } style={ { width : 600, height : 200 } }>
+            <Text style={ { padding : 10 } }> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint deleniti cupiditate cum explicabo dicta vero corporis saepe obcaecati beatae ab. Facere tempora, maiores neque magni omnis dicta quos eum sint.
+            Veniam, sit est ducimus enim nesciunt alias nobis repudiandae distinctio provident earum maiores laudantium totam aliquam fugiat quia asperiores natus quasi quisquam commodi voluptas esse excepturi expedita. Nostrum, modi similique.
+            </Text>
+          </ImageBackground>
+        </View>
+}
