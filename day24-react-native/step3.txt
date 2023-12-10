@@ -1,0 +1,9 @@
+import { SafeAreaView, Text, View } from "react-native"
+/* https://coolors.co/palettes/trending */
+export default app = () => {
+  return <View style={ { backgroundColor : "silver", flex : 1, alignContent: "space-between"} }>
+            <View style={ { flexGrow : 3,  width : 720,  backgroundColor : "#606c38", } }></View>
+            <View style={ { flexGrow : 20,  width : 720,  backgroundColor : "#dda15e", } }></View>
+            <View style={ { flexGrow : 1,  width : 720,  backgroundColor : "#bc6c25", } }></View>
+        </View>
+}
