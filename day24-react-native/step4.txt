@@ -1,0 +1,7 @@
+import {  Text, View } from "react-native"
+/* https://coolors.co/palettes/trending */
+export default app = () => {
+  return <View style={ { backgroundColor : "silver", flex : 1, paddingTop: 30} }>
+    <Text style={ {color : 'blue', marginLeft : 20 } }>Welcome to your <Text style={ { color : "red" } }> Life </Text></Text>
+  </View>
+}
