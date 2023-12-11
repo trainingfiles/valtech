@@ -34,5 +34,4 @@
   <a href="https://forms.gle/YjBbLRNKypYiCh9t8">React Native - Assessment Link </a>
 </details>
 
-https://forms.gle/YjBbLRNKypYiCh9t8
 
