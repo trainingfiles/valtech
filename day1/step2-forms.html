@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms API</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sl#</th>
+                <th>Input Type</th>
+                <th>How it's rendered in the browser</th>
+                <th>Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Text</td>
+                <td> <input onblur="writeit(this)" type="text"> </td>
+                <td> <output id="textoutput"></output> </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Search</td>
+                <td> <input type="search"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Color</td>
+                <td> <input type="color"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Range</td>
+                <td> <input type="range"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Time</td>
+                <td> <input type="time"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Date</td>
+                <td> <input type="date"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Date Time Local</td>
+                <td> <input type="datetime-local"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Week</td>
+                <td> <input type="week"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Month</td>
+                <td> <input type="month"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Number</td>
+                <td> <input type="number"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>eMail</td>
+                <td> <input type="email"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Telephone</td>
+                <td> <input type="tel"> </td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>URL</td>
+                <td> <input type="url"> </td>
+                <td> <output></output> </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function writeit(elm){
+            document.getElementById("textoutput").value = elm.value;
+        };
+        // writeit();
+    </script>
+</body>
+</html>
