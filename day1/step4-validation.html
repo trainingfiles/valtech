@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation API</title>
+    <script>
+        function validateMe(){
+            document
+            .getElementById("valtech_age")
+            .setCustomValidity("you did not fill valtech age field");
+        };
+        window.onload = validateMe;
+
+        function checkit(elm){
+            if(elm.value < 18){
+                elm.setCustomValidity("you are too young to join us");
+            }else if(elm.value > 90){
+                elm.setCustomValidity("you are too old to join us");
+            }else{
+                elm.setCustomValidity("");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="get">
+        <table>
+            <tbody>
+             <tr>
+                 <td>User Name</td>
+                 <td><input required name="username" type="text"></td>
+             </tr>
+             <tr>
+                 <td>User eMail</td>
+                 <td><input required name="usermail" type="email"></td>
+             </tr>
+             <tr>
+                 <td>User phone</td>
+                 <!--  placeholder="###-#######"  -->
+                 <td><input required title="###-#######" pattern="[0-9]{3}-[0-9]{7}" name="userphone" type="text"></td>
+                 <tr>
+             </tr>
+                 <td>User Age</td>
+                 <td><input oninput="checkit(this)" id="valtech_age" required name="userage" ></td>
+                 <!-- <td><input required min="18" max="90" name="userage" type="number"></td> -->
+             </tr>
+             <tr>
+                 <td colspan="2">
+                     <!-- <button>
+                         <h2>Click Me</h2>
+                         <hr>
+                         <p>
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis veritatis facere natus sapiente voluptates cum quibusdam dolores incidunt accusantium laboriosam, ut et quam fugit quas placeat minus! Vel, sunt exercitationem?
+                         </p>
+                     </button> -->
+                     <button style="width: 250px;">Click Me</button>
+                 </td>
+             </tr>
+            </tbody>
+         </table>
+    </form>
+</body>
+</html>

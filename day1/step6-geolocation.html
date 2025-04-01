@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation - API</title>
+    <script>
+        /* 
+        var pos;
+        var lon;
+        var lat;
+        var acc; 
+        */
+        var pos, lon, lat, acc;
+        function successFun(position){
+            /* 
+            pos = position;
+            lat = pos.coords.latitude;
+            lon = pos.coords.longitude;
+            acc = pos.coords.accuracy; 
+            */
+           document.getElementById("lat").textContent = position.coords.latitude;
+           document.getElementById("lon").textContent = position.coords.longitude;
+           document.getElementById("acc").textContent = position.coords.accuracy;
+           document.getElementById("ts").textContent = new Date(position.timestamp);
+        }
+        function errorFun(error){
+            console.log(error)
+        }
+        if(navigator.geolocation){
+            console.log("Geolocation is available");
+            navigator.geolocation.getCurrentPosition(successFun, errorFun,{
+                enableHighAccuracy : true,
+                maximumAge : 10000,
+                timeout : 5000
+            })
+        }else{
+            console.log("Geolocation is not available");
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Longitude : <span id="lon"></span></li>
+        <li>Latitude : <span id="lat"></span></li>
+        <li>Accuracy : <span id="acc"></span></li>
+        <li>Time Stamp : <span id="ts"></span></li>
+    </ul>
+</body>
+</html>

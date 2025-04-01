@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media API</title>
+    <script>
+        var vid, timer ;
+        window.onload = function(){
+           vid = document.getElementsByTagName("video")[0];
+           console.log(vid.canPlayType("video/mp4"));
+           console.log(vid.canPlayType("video/ogg"));
+           console.log(vid.canPlayType("video/webm"));
+        };
+        function playvid(){
+            vid.play();
+            if(timer === undefined){
+                timer = setInterval(function(){
+                    document.getElementById("log").value = vid.currentTime;
+                    console.log(Math.random());
+                }, 1)
+             };
+        }
+        function pausevid(){
+            vid.pause();
+            clearInterval(timer);
+        };
+        function stopvid(){
+            vid.pause();
+            vid.currentTime = 0;
+            document.getElementById("log").value = vid.currentTime;
+            clearInterval(timer);
+        };
+    </script>
+</head>
+<body>
+    <video width="550" height="400" poster="images/rajani.jpg" >
+        <source src="media/html5.mp4">
+        <source src="media/html5.webm">
+    </video>
+    <h1>Current Time : <output id="log"></output> </h1>
+    <button onclick="playvid()" >Play</button>
+    <button onclick="stopvid()" >Stop</button>
+    <button onclick="pausevid()" >Pause</button>
+    <!--     
+    <button>Rewind</button>
+    <button>Loop</button> 
+    -->
+</body>
+</html>

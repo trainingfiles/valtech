@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outputs API</title>
+    <script>
+        function checkit(elm){
+            document.getElementById("prog").value = elm.value;
+        }
+    </script>
+</head>
+<body>
+    <input min="0" max="1" step="0.1" oninput="checkit(this)" type="range"  >
+    <span id="log"></span>
+    <h1> Progress </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Progress</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <progress id="prog" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <progress value="0" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <progress value="1" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <progress value="0.5" >
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<h1> Meter </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Meter</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <meter value="1" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <meter value="80" min="10" max="80" low="30" high="60" optimum="60" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <meter value="20" min="10" max="80" low="30" high="60" optimum="70" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <meter value="90" min="10" max="80" low="30" high="60" optimum="20" >
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
