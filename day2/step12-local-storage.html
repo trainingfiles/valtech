@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage step1</title>
+    <script>
+       /*  
+        window.onload = function(){
+            if(localStorage){
+                console.log("LocalStorage is found")
+            }else{
+                console.log("Update your browser")
+            }
+        }; 
+        */
+        /* function clickHandler(){
+            // console.log("you clicked the button");
+             window.localStorage.username = "Vijay";
+        };
+        function getHandler(){
+            // console.log("you clicked the button");
+            alert(window.localStorage.username);
+        }; */
+        function addUserInfo(){
+            localStorage.setItem("firstname", document.getElementById("fn").value)
+        }
+        function getCount(){
+            alert(localStorage.length);
+        }
+        function getUserName(){
+            alert(localStorage.getItem('firstname'));
+        }
+        function removeFirstName(){
+            localStorage.removeItem('firstname');
+            alert("firstname is now removed");
+        }
+        function allClear(){
+            localStorage.clear();
+            alert("all cleared");
+        }
+        function getKey(){
+            alert(localStorage.key(0));
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>User Login Form</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Your First Name</th>
+                   <!--  <th>Your Last Name</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input id="fn" type="text">
+                    </td>
+                    <td>
+                       <!--  <input type="text"> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="addUserInfo()">Add User Info</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+   <!--  <button onclick="clickHandler()">Set User Name</button>
+    <button onclick="getHandler()">Get User Name</button> -->
+    <button onclick="getCount()">Number of items stored</button>
+    <br>
+    <button onclick="getUserName()">Get First Name</button>
+    <br>
+    <button onclick="removeFirstName()">Remove First Name</button>
+    <br>
+    <button onclick="allClear()">All Clear </button>
+    <br>
+    <button onclick="getKey()">Get First Key</button>
+</body>
+</html>
