@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas step1</title>
+    <style>
+        canvas{
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+        /* text, image, video, shape */
+        window.onload = function(){
+           var can = document.getElementsByTagName("canvas")[0];
+           var ctx = can.getContext("2d");
+           // ctx.scale(0.5,2);
+           // ctx.translate(100,100);
+           // ctx.rotate(((Math.PI/2)/180) * 90);
+           ctx.font = "bold 36px Arial";
+           // ctx.strokeText("Valtech",0,30);
+           ctx.fillStyle = "orange";
+           ctx.fillText("Valtech",0,50);           
+          /*  
+           ctx.fillStyle = "grey";
+           ctx.fillText("Gujrat",0,66);        
+           */    
+        };
+
+        /* 
+        scale
+        rotate
+        translate
+        transform
+        */
+    </script>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+</body>
+</html>

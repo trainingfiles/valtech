@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session Storage step2</title>
+    <script>
+        window.onload = getAvengers;
+        function addUserInfo() {
+            var userobj = {
+                firstname: document.getElementById("fn").value,
+                lastname: document.getElementById("ln").value,
+                power: document.getElementById("pow").value
+            }
+            sessionStorage.setItem(document.getElementById("title").value, JSON.stringify(userobj));
+            document.getElementById("title").value = "";
+            document.getElementById("fn").value = "";
+            document.getElementById("ln").value = "";
+            document.getElementById("pow").value = 0;
+            getAvengers();
+        }
+
+        function getAvengers() {
+            var count = sessionStorage.length;
+            var log = document.getElementById("log")
+            log.innerHTML = "";
+            for (var i = 0; i < count; i++) {
+                var currentHero = sessionStorage.key(i);
+                var logHero = JSON.parse(sessionStorage.getItem(currentHero + ""));
+                log.innerHTML += "<p>" + logHero.firstname + ' ' + logHero.lastname + ' power is ' + logHero.power + "</p>";
+            }
+        }
+        function removeSelectedHero() {
+            var count = sessionStorage.length;
+            for (var i = 0; i < count; i++) {
+                var currentHero = sessionStorage.key(i);
+                if (currentHero === document.getElementById("rh").value) {
+                    sessionStorage.removeItem(currentHero);
+                    getAvengers();
+                    document.getElementById("rh").value = "";
+                } else {
+                    console.log("hero not found")
+                }
+            } 
+        }
+        function allClear() {
+            sessionStorage.clear();
+            alert("all cleared");
+        }
+        function getKey() {
+            alert(sessionStorage.key(0));
+        }
+        window.storage = function(){
+            console.log("Event ", event);
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Avengers List</legend>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Title
+                    </td>
+                    <td>
+                        <input id="title" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        First Name
+                    </td>
+                    <td>
+                        <input id="fn" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name
+                    </td>
+                    <td>
+                        <input id="ln" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Power
+                    </td>
+                    <td>
+                        <input id="pow" type="range" min="0" max="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="addUserInfo()">Add Avenger</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <div id="log"></div>
+        <hr>
+        <label>Remove From the list :
+            <input id="rh" type="text">
+        </label>
+        <button onclick="removeSelectedHero()">Remove Selcted Avenger</button>
+    </fieldset>
+    <hr>
+</body>
+
+</html>

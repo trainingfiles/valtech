@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas with Shapes</title>
+    <style>
+        canvas{
+            border: 1px solid gray;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+    window.onload = function(){
+        var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
+        ctx.strokeStyle = "red";
+        ctx.fillStyle = "green";
+        ctx.lineWidth = 5;
+        ctx.moveTo(100,100);
+        ctx.lineTo(100,200);
+        ctx.lineTo(200,200);
+        ctx.lineTo(200,100);
+        ctx.lineTo(100,100);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+    }
+    </script>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+</body>
+</html>

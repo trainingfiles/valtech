@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas with Shapes Animation</title>
+    <style>
+        canvas{
+            border: 1px solid gray;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+    var boxX = 0;
+    var boxY = 0;
+    var boxD = 0;
+    window.onload = function(){
+        var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
+            ctx.fillStyle = "orange";
+        setInterval(function(){
+            var r = Math.round(Math.random() * 255);
+            var g = Math.round(Math.random() * 255);
+            var b = Math.round(Math.random() * 255);
+            var a = Math.random();
+            boxX = Math.round(Math.random() * 500);
+            boxY = Math.round(Math.random() * 500);
+            boxD = Math.round(Math.random() * 100);
+            // ctx.clearRect(0,0,500,500);
+            ctx.fillStyle = "rgb("+r+","+g+","+b+","+a+")";
+            ctx.fillRect(boxX,boxY,boxD,boxD);
+            if(boxX > 500){
+                boxX = -100;
+            }
+            boxX++;
+        },10)
+    }
+    </script>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+</body>
+</html>

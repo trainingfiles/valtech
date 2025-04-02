@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas with Images</title>
+    <style>
+        canvas{
+            border: 1px solid gray;
+        }
+    </style>
+    <script>
+    window.onload = function(){
+        var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
+        // ctx.drawImage(document.getElementById("ant"),0,0);
+        var img = new Image();
+            img.src = "images/antman.jpg";
+            // img.onload = function(event){
+            img.onload = function(){
+                // ctx.drawImage(event.target,0,0);
+                // ctx.rotate(((Math.PI / 2) / 180) * 45)
+                // ctx.scale(0.2,0.1)
+                ctx.drawImage(img,0,0);
+            };
+    }
+    </script>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+    <hr>
+    <!-- <img style="display: none;" src="images/antman.jpg" id="ant"> -->
+</body>
+</html>
