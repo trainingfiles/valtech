@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>datalist can be used with : text, search, url, date, tel, email, range, number and color</h2>
+    <hr>
+    <h3>with text input</h3>
+    <input list="heroes" placeholder="Avengers">
+    <datalist id="heroes">
+        <option value="Ironman">
+        <option value="Spiderman">
+        <option value="Hulk">
+        <option value="Thor">
+    </datalist>
+    <hr>
+    <h3>with text search</h3>
+    <input type="search" list="heroes" placeholder="Avengers">
+    <datalist id="heroes">
+        <option value="Ironman">
+        <option value="Spiderman">
+        <option value="Hulk">
+        <option value="Vision">
+        <option value="Dr Strange">
+        <option value="Green Arrow">
+        <option value="Black Widow">
+        <option value="Captain America">
+    </datalist>
+    <hr>
+    <h3>with text time</h3>
+    <label>Movie Show Timeings</label>
+    <input type="time" list="shows" />
+    <datalist id="shows">
+        <option value="10:00"></option>
+        <option value="13:00"></option>
+        <option value="16:00"></option>
+        <option value="19:00"></option>
+    </datalist>
+    <hr>
+    <h3>with text range</h3>
+    <label>Number of times to loop</label>
+    <input type="range" list="times" min="0" max="200" />
+    <datalist id="times">
+        <option value="1"></option>
+        <option value="20"></option>
+        <option value="50"></option>
+        <option value="108"></option>
+    </datalist>
+</body>
+
+</html>
