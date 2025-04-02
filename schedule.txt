@@ -1,0 +1,340 @@
+Frontend Course Coverage
+1.HTML Basics, HTML5 (3 Days) day 1-3
+Introduction to the Course
+	Preparation and Setup
+	Basic HTML
+	Elements/Tags and Attributes
+	Head Section
+	Text
+	Hyperlinks
+	Images
+	Video and Audio
+	List
+	Tables
+	Layout and container
+	Forms
+	Using Dev tools for Inspecting pages
+HTML5
+	Converting a legacy document to HTML5
+New APIs in HTML5
+	All new Header code
+	Usage of the Main tag
+	Semantic tags
+The Form API
+	New Inputs and their attributes
+	Validations Built-in
+	Fallback Options
+	HTML5 Boiler plate Usage
+Audio and Video
+	Introduction
+	Fallback
+
+The Geolocation API
+	Handling Errors
+	Dealing with mobile
+	Fallback options
+Storage API
+	What is HTML5 Storage 
+	Different options available 
+	The Local Storage
+	Tracking Changes to Storage
+	Limitations
+	Fallback options
+
+Web workers
+	Usage and limitations
+	Types of workers
+
+What’s new in HTML5
+	Where to go from here
+
+
+2.	CSS Basics, CSS3 (3 Days) day 4-6
+
+CSS Basics
+	Introduction
+	History and references 
+	Usages of Cascading Style Sheets	
+	Including CSS in HTML	
+	Cascading
+	Inheritance
+	Ways to use CSS
+	Basic selectors
+	Combinator selectors
+	Pseudo-class selectors
+	Pseudo-elements selectors
+	Attribute selectors
+	Working with colors	
+	Colors	
+	Background colors	
+	Background Image.	
+	Background image properties
+
+Texts and Fonts with Style	
+	Working with Fonts	
+	Working with Text
+
+Formatting and Positioning	
+	The CSS formatting Model	
+	Block-level Elements	
+	Box Properties	
+	Margins	
+	Padding	
+	Specificity
+	Borders
+	Width and Height
+	Positioning	
+	Float	
+	Clear
+	
+Introduction to new CSS 3
+	CSS 3 Basics
+	New Selectors
+	Filters
+	
+New CSS3 Box Model
+	Flex box
+	Grids
+	Columns
+	Dealing with multi column layouts
+New Border Capabilities
+The new scale 9 border capabilities
+	Dealing with corners
+Multiple background
+	Transparencies and opacities
+	Gradients
+	Shadows 
+	Multi shadows
+	Text shadows
+	Reflections 
+Font embedding in CSS3
+	Text colouring
+Usage of Media Query
+	Types of Queries
+	Practical Usage and libraries
+	Responsive Properties
+Transformations
+	2D Transformations
+	Transitions
+	Animations 
+
+
+
+3.Java Script, Ajax (4 Days) day 7-10
+JavaScript 
+	Tooling and setup
+	Fundamentals
+
+ES5, ES6 
+	Introduction and features
+	ES5, ES6, ES7 and ES8
+	Destruction
+	Array Methods
+	Object Creation (Include deep clone, shallow copy)
+	Asynchronous JS
+	Iterators & generators
+	Regular expressions
+	Functions in depth
+	Default parameters and rest parameters
+	Spreads
+	Closures
+	Scope chain
+	IIFE
+	Composition
+	Classes in ES6 and ESLatest
+	OOP, Prototypal Inheritance Vs Functional Programming
+	Working with Modules in ES6
+
+AJAX
+	Introduction
+	Dealing with external data
+	Ajax with XMLHttpRequest and Fetch API
+	Working with XML
+	Working with JSON
+	Using jQuery
+	Understanding  JSONP and XMLP
+	Templates
+	ES6 Templating
+	Putting all together in an exercise
+	
+4.NodeJS (2 Days) day 11 - 12
+
+Introduction to NodeJS
+	Introducing to CJS & ESM
+NPM
+	Built-in modules
+	Loading external modules
+	Event Loops
+	Streams
+	Dealing with files
+	Creating a web server
+	Express
+	Templates
+	Mongo CRUD
+	Authorisation and Authentication
+
+5. Bootstrap and Tailwind CSS (2 Days) day 13 - 14
+
+Introduction to Bootstrap 
+	Introduction to CSS Libraries
+	Setup and tooling
+	Layouts and grids
+	
+Typography
+	Components
+	Plugins
+	Responsive Features
+
+Introduction to Tailwind 
+Setup 
+	Typography
+	Layouts and grids
+	Responsive Features
+	Interactive features
+	Customization
+
+6. VueJS (3 Days) day 15 - 17
+Introduction
+	Introduction to the course
+	Setup and tooling
+Course Basics
+	Vue Workflow
+	Using Templates
+	Components
+	Component Basics
+	Data Binding and interpolation
+	Data property and methods object
+	Computed properties and methods
+	Adding watchers
+	Conditional rendering
+	Custom Component 
+	Events
+	Template Refs and to Ref
+Lists	
+	Rendering list
+	List with conditions
+Sort lists
+	Filter lists
+
+Forms
+	Forms and inputs
+	User Events
+	Event Handlers
+Style	
+	Component Style
+Vue Routes
+	Navigation with routes
+Vue Router
+	Links and dynamic navigation
+	Default and wildcard routes
+	Redirection 
+	Passing route parameters
+	Nested Routes
+	Guards for navigation
+
+State management with VueX
+    Reading State
+	State Mutation
+	VueX state getters and setters
+	VueX state Plugins
+	VueX actions
+	VueX action dispatchers
+	Using VueX Provide to inject state
+Introduction to Pinia
+	VueX, Composable state and Pinia 
+	State management with Pinia
+	State of component
+	 Actions and Getters
+CRUD Application
+	Introduction
+	Connecting to RESTful api
+	Creating a CRUD application
+Transition
+	Transition with CSS
+	The transition component
+	Customize transitions
+	Grouping transitions
+Production Development
+	Building project for deployment
+Unit Testing
+	Configurations for unit testing
+	Testing components
+	Testing forms and inputs
+	Mocking data
+
+8.TypeScript (1 days) day 18
+ 
+Using the TypeScript transpilers
+	TypeScript Syntax and basics
+	Implicit and Explicit Types
+	Typed Values
+	TypeScript in web application
+	The static type checking
+	Type guard
+	The webpack module builder
+	The type safe JavaScript
+	Working with Interfaces.
+	TypeScript. Classes
+	Using annotations
+	Working with generics
+	TypeScript decorators
+	Modules with TypeScript
+
+9.Angular (4 Days) day 19 - 22
+
+Overview of Single page Apps
+	The Angular CLI 
+	Commands of CLI
+	
+Building blocks of Angular framework
+	Why Angular ?
+	Working with NPM
+	Setup Angular project and application
+	Introduction to Angular Module
+	Root Component
+	Writing Re-usable components
+	Structure of a component
+	Application bootstrapping process
+	Annotations of @Module and @Component
+	Template interpolation
+	Understanding components with module and standalone components
+	Component Communication
+	Signals and how to use them
+	Computed Signals
+	Usage of built-in directives
+	Creating Custom directives
+	Usage of Pipes
+	Creating custom pipes
+	Lifecycle hooks
+	Forms 
+	Built-in validations and Custom Validations
+	Services and how to set up
+	Understanding Dependency Injection 
+	Interceptors
+	Routing in Angular
+	Route Guards
+	Router Parameters
+	Setting components and assets 
+	Getting External Data
+	Creating a CRUD application with MongoDB 
+
+10. RxJS and NGRX (1 Day) day 23
+RxJS and NGRX
+	Observable pattern
+	Using the RxJS Library
+	Promises vs Observables
+	Observables and operators
+	HTTP calls using RxJs library
+	Applying NGRX 
+	Understanding Actions
+	Dispatching Payloads
+	Reducers and its usage
+	Managing State and its methods
+
+11.Unit Testing (1 Day) day 24
+Testing 
+	Unit testing Angular code with Karma and Jasmine
+	Setup
+	Practices
+	Reference 
+	Assignment
