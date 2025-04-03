@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid black;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+    <script>
+        var data = [100,250,350,99,49,333,199,170,65,28,45,33,7,444,21,163,18,26,225];
+        var gap = 20;
+        var ctx ;
+        function render(val){
+            ctx.strokeStyle = "silver";
+            for(var i = 0; i < 500; i+=val){
+                ctx.beginPath();
+                ctx.moveTo(i,0);
+                ctx.lineTo(i,500);
+                ctx.closePath();
+                ctx.stroke();
+            }
+            for(var i = 0; i < 500; i+=val){
+                ctx.beginPath();
+                ctx.moveTo(0,i);
+                ctx.lineTo(500,i);
+                ctx.closePath();
+                ctx.stroke();
+            }
+            for(var i = 0; i < data.length; i++){
+                ctx.fillStyle = "red";
+                ctx.fillText(data[i],i*20,ctx.canvas.height-data[i])
+                ctx.fillStyle = "blue";
+                ctx.fillRect(i*20,ctx.canvas.height-data[i],10,data[i])
+            } 
+        }
+        window.onload = function(){
+           ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
+           /* 
+            for(var i = 0; i < data.length; i++){
+                ctx.fillStyle = "red";
+                ctx.fillText(data[i],i*20,ctx.canvas.height-data[i])
+                ctx.fillStyle = "blue";
+                ctx.fillRect(i*20,ctx.canvas.height-data[i],10,data[i])
+            } 
+            */
+            render(gap);
+        }
+    </script>
+</head>
+<body>
+    <input onchange="" type="range" min="5" max="50" step="5" >
+    <canvas width="500" height="500"></canvas>
+</body>
+</html>

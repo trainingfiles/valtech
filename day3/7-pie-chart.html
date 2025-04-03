@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 2px solid grey;
+            display: block;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        var sales = [100,68,51,89,313,260,450,207,420,27,333,290,321];
+        // 2929
+        var percent = [];
+        percent.push((100 / 2929) * 360); 
+        percent.push((68 / 2929) * 360);  
+        percent.push((51 / 2929) * 360);  
+        percent.push((89 / 2929) * 360);  
+        percent.push((313 / 2929) * 360);  
+        percent.push((260 / 2929) * 360);  
+        percent.push((450 / 2929) * 360);  
+        percent.push((207 / 2929) * 360);  
+        percent.push((420 / 2929) * 360);  
+        percent.push((27 / 2929) * 360);  
+        percent.push((333 / 2929) * 360);  
+        percent.push((290 / 2929) * 360);  
+        percent.push((321 / 2929) * 360);  
+
+        var startPos = 0;
+        var pos = 250;
+        var rad = 250;
+        var ctx = document.getElementById("can").getContext("2d");
+
+        for(var i = 0; i < percent.length; i+=1){
+            var r = Math.round(Math.random() * 255);
+            var g = Math.round(Math.random() * 255);
+            var b = Math.round(Math.random() * 255);
+            ctx.beginPath();
+            ctx.moveTo(pos,pos);
+            ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+            ctx.arc(pos, pos, rad, startPos, (Math.PI / 180) * percent[i]+startPos, false )
+            ctx.lineTo(pos,pos);
+            startPos+=(Math.PI / 180) * percent[i];
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+        }
+       
+    </script>
+</body>
+</html>
