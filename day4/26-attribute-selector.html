@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Selector</title>
+    <style>
+      /*  
+     img {
+        border: 2px solid red;
+      } 
+    */
+      /* Attribute Selector */
+      /* 
+      img[alt] {
+        border: 5px solid red;
+      } 
+      img[width="99"] {
+        border: 5px solid red;
+    }
+    img[width="100"] {
+        border: 5px solid blue;
+    }
+    */
+      /* attribute value in the begining */
+      /*  
+      img[alt^="super"] {
+        border: 5px solid blue;
+    } 
+    */
+      /* attribute value in the ending */
+      /* img[alt$="man"] {
+        border: 5px solid blue;
+    } */
+      /* attribute anywhere in the value*/
+      /* img[alt*="r"] {
+        border: 5px solid blue;
+    } */
+      /* attribute has a space followed by the value*/
+      /*   img[alt~="spider"] {
+        border: 5px solid blue;
+    } */
+      /* attribute has a dash followed by the value*/
+      img[alt|="ant"] {
+        border: 5px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/antman.jpg" alt="ant man" width="100" />
+    <img src="images/batman1.jpg" alt="bat man" width="100" />
+    <img src="images/wonderwoman.jpg" alt="wonder woman" width="100" />
+    <img src="images/spiderman.jpg" alt="spider man" width="100" />
+    <img src="images/supergirl.jpg" alt="super girl" width="100" />
+    <img src="images/spiderman.jpg" alt="spiderman" width="100" />
+    <img src="images/wonderwoman.png" alt="wonder woman" width="100" />
+    <img src="images/hulk.jpg" alt="hulk" width="100" />
+    <img src="images/captainmarvel.jpg" alt="captain marvel" width="100" />
+    <img src="images/antman.jpg" alt="ant-man" width="99" />
+    <img src="images/blackwidow.jpg" alt="black widow" width="100" />
+    <img src="images/superman.jpg" alt="super man" width="100" />
+    <img src="images/captainamerica.jpg" alt="captain america" width="100" />
+    <img src="images/blackpanther.jpg" alt="black panther" width="100" />
+    <img src="images/rajani.jpg" alt="rajani" width="100" />
+    <img src="images/robin.jpg" width="100" />
+  </body>
+</html>

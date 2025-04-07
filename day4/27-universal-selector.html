@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal Selector</title>
+    <style>
+      /* Universal Selector */
+      /*  body * {
+        border: 2px solid red;
+    } */
+      /* Decendent Selector */
+      /* ul li {
+        border: 5px solid grey;
+      } */
+      div em {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  
+    (ul>li{List Item $}*5)*3
+    .box>h${Heading $}*6  
+    -->
+    <li>List Item 2</li>
+    <li>List Item 2</li>
+    <li>List Item 2</li>
+    <li>List Item 2</li>
+    <li>List Item 2</li>
+    <li>List Item 2</li>
+    <ul>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+      <li>List Item 4</li>
+      <li>List Item 5</li>
+    </ul>
+    <ol>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+      <li>List Item 4</li>
+      <li>List Item 5</li>
+    </ol>
+    <ul>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+      <li>List Item 4</li>
+      <li>List Item 5</li>
+    </ul>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet
+        <span
+          >consectetur <em>adipisicing</em> elit. Minus Lorem ipsum dolor
+          <span>sit, amet <em>consectetur</em> adipisicing elit. </span>Minus
+          animi unde ea voluptates commodi maxime eius corporis aperiam corrupti
+          quia, dolorum totam, cum autem repellat magnam optio asperiores veniam
+          recusandae. </span
+        >, dolorem illo iste vel alias <cite>consequuntur</cite> nisi iusto, cum
+        eaque nesciunt possimus sit, <i>aliquid quo</i> ipsa
+        <em>libero eos</em> a quae. Voluptate.
+      </p>
+    </div>
+    <div class="box">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </div>
+  </body>
+</html>
