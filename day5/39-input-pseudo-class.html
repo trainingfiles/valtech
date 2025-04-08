@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function callFun(elm) {
+        elm.setAttribute("disabled", "disabled");
+      }
+    </script>
+    <style>
+      /* input:checked {
+        outline: 5px solid orangered;
+      } */
+      /* 
+      input[type="number"]:valid {
+        outline: 5px solid yellow;
+      }
+      input[type="number"]:invalid {
+        outline: 5px solid rgb(0, 26, 255);
+      }
+      button:disabled {
+        background-color: aqua;
+        color: darkgoldenrod;
+      }
+      .red::selection {
+        background-color: crimson;
+        color: papayawhip;
+      }
+      .green::selection {
+        background-color: rgb(9, 135, 42);
+        color: papayawhip;
+      } 
+     */
+      /*  :root {
+        border: 2px solid red;
+      } */
+      /* .z:empty {
+        border: 2px solid red;
+        } */
+      body > article {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="pune">Pune</label>
+      <input id="pune" type="checkbox" />
+    </div>
+    <div>
+      <label for="ahmadabad">Ahmadabad</label>
+      <input id="ahmadabad" checked type="checkbox" />
+    </div>
+    <div>
+      <label for="bengaluru">Bengaluru</label>
+      <input id="bengaluru" type="checkbox" />
+    </div>
+    <input type="number" min="1" max="20" />
+    <button onclick="callFun(this)">Click Me</button>
+    <article>
+      <h3>Article</h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse
+      vel fuga magnam. Necessitatibus blanditiis totam ullam eum, temporibus
+      voluptates? Totam, corporis magni nisi vitae impedit quam minus quae
+      laboriosam!
+    </article>
+    <div class="red">
+      <section>
+        <article>
+          <h3>Article</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          esse vel fuga magnam. Necessitatibus blanditiis totam ullam eum,
+          temporibus voluptates? Totam, corporis magni nisi vitae impedit quam
+          minus quae laboriosam!
+        </article>
+      </section>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa
+      nobis harum non, minima ullam voluptatem nisi doloribus ad! Officia sint
+      veritatis laborum assumenda laboriosam quos saepe accusantium ullam id?
+      Fugit repudiandae distinctio quisquam mollitia dignissimos a ut nobis
+      ullam, laboriosam quam voluptates atque eligendi provident blanditiis
+      earum illo sunt aliquam ipsa qui. Alias reprehenderit vero harum
+      recusandae asperiores aliquid.
+    </div>
+    <div class="green">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa
+      nobis harum non, minima ullam voluptatem nisi doloribus ad! Officia sint
+      veritatis laborum assumenda laboriosam quos saepe accusantium ullam id?
+      Fugit repudiandae distinctio quisquam mollitia dignissimos a ut nobis
+      ullam, laboriosam quam voluptates atque eligendi provident blanditiis
+      earum illo sunt aliquam ipsa qui. Alias reprehenderit vero harum
+      recusandae asperiores aliquid.
+    </div>
+    <div class="z"></div>
+  </body>
+</html>
