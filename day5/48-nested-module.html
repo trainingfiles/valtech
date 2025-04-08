@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .x {
+        background-color: aquamarine;
+        padding: 10px;
+        .y {
+          background-color: cadetblue;
+          border: 5px dotted red;
+        }
+        &.y {
+          font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        }
+        & + p {
+          background-color: brown;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- (.x{lorem}>.y{lorem})+(.x.y{lorem})+p{lorem} -->
+
+    <div class="x">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque cupiditate
+      quos reprehenderit similique corporis in earum. Ad assumenda incidunt in,
+      recusandae perspiciatis dolore aperiam modi facere nam! Maiores, aut
+      minus?
+      <div class="y">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam doloribus
+        laudantium ipsam voluptatibus sit? Nostrum, aspernatur. Itaque quis
+        enim, autem provident sed dolorem reprehenderit, temporibus minima vero
+        dolore aspernatur. Velit?
+      </div>
+    </div>
+    <hr />
+    <div class="x y">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quis
+      laboriosam, quaerat odio quasi tempora vero fuga quisquam optio enim
+      beatae similique. Autem exercitationem ad possimus fuga. Nihil,
+      reprehenderit error?
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet in rem
+      architecto ipsam? Vitae saepe aspernatur illo, ea quis aliquam vel,
+      dolorem ipsum animi tenetur iste? Fuga hic adipisci quia.
+    </p>
+  </body>
+</html>

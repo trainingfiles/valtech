@@ -8,6 +8,8 @@
       /* 
         reset.css
         normalize.css
+
+        clearfix
       */
       body {
         margin: 0px;
@@ -15,14 +17,12 @@
       section {
         width: 780px;
         background-color: #ee964b;
-        height: 500px;
         margin: auto;
-        position: relative;
       }
       article {
-        position: absolute;
         padding: 20px;
         margin: 0px 10px;
+        float: left;
       }
       article h2 {
         margin: 0px;
@@ -41,31 +41,29 @@
         font-family: sans-serif;
       }
       article:nth-child(1) {
-        left: 0px;
         width: 200px;
         background-color: #65a7e5;
       }
       article:nth-child(2) {
-        left: 260px;
         width: 200px;
         background-color: #faf0ca;
       }
       article:nth-child(3) {
-        left: 520px;
         width: 200px;
         background-color: #f4d35e;
       }
-      /*  aside {
-        position: fixed;
-        top: 100px;
-        right: 100px;
-        width: 200px;
-        height: 200px;
-        background-color: #1b1853;
-        color: aliceblue;
+      /* footer {
+        clear: left;
         text-align: center;
-        line-height: 200px;
+        width: 780px;
+        background-color: blue;
       } */
+
+      section:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
     </style>
   </head>
   <body>
@@ -77,7 +75,7 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, dolore
           laudantium. Eveniet repudiandae a nisi recusandae optio! Autem
           quibusdam iste alias! Eius atque, sed tenetur dicta dolores laboriosam
-          doloremque obcaecati?
+          doloremque obcaecati? lorem
         </div>
       </article>
       <article>
@@ -87,7 +85,10 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
           minus quos ut, beatae explicabo autem voluptatem illum ipsam tenetur
           amet sit, perspiciatis repellat quo ex temporibus laborum, deserunt
-          optio quibusdam!
+          optio quibusdam! Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Eveniet facere rerum error molestias in sapiente saepe, placeat
+          odit corrupti, eum iusto facilis labore rem id vero ratione. Veniam,
+          reprehenderit maiores.
         </div>
       </article>
       <article>
@@ -97,14 +98,18 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eligendi
           animi distinctio est dicta impedit nisi facere, porro similique sequi
           quos officiis. Aut, distinctio molestias deserunt officiis beatae
-          expedita tempore.
+          expedita tempore. Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Distinctio placeat numquam voluptas. Eaque ullam quidem
+          recusandae, minus qui itaque quod fuga neque perferendis mollitia
+          tempora, corporis id corrupti nostrum ducimus. Error perspiciatis
+          voluptas tempore eaque doloribus deserunt quis vitae. Natus harum
+          veritatis assumenda minus quibusdam, ipsam odit deserunt accusamus
+          veniam. Saepe quas soluta, laborum veritatis vitae rem impedit! Id,
+          omnis.
         </div>
       </article>
+      <!-- <div>.</div> -->
+      <!-- <footer>&copy; copyrights reserved by valtech India</footer> -->
     </section>
-    <!-- 
-    <aside>
-      <div>welcome to your life</div>
-    </aside> 
-    -->
   </body>
 </html>
