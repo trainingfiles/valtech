@@ -1,0 +1,19 @@
+#box {
+  background-color: rgb(34, 0, 255);
+  background-image: url("../images/herosmall.jpg");
+  width: 598px;
+  height: 387px;
+}
+#content {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 598px;
+  height: 387px;
+  /* background-color: rgba(255, 13, 0, 0.694); */
+  background-color: hsla(0, 100%, 50%, 0.5);
+  /* opacity: 0.5; */
+  text-align: justify;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: beige;
+}

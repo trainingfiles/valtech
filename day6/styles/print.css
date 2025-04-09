@@ -1,0 +1,15 @@
+.container {
+  background-color: darkslategray;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 30px;
+  line-height: 100px;
+  border: 1px solid black;
+}

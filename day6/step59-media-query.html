@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Screen Style Declaration */
+      /* max-width / min-width / resolution / orintation */
+      @media screen and (min-width: 1200px) {
+        .container {
+          background-color: darkslategray;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .box {
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          font-family: sans-serif;
+          font-size: 30px;
+          line-height: 100px;
+          background-color: silver;
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        .container {
+          background-color: darkslategray;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .box {
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          font-family: sans-serif;
+          font-size: 30px;
+          line-height: 100px;
+          background-color: silver;
+        }
+        .box1 {
+          background-color: orange;
+        }
+      }
+      @media screen and (orientation: portrait) {
+        .container {
+          background-color: rgb(251, 255, 1);
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .box {
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          font-family: sans-serif;
+          font-size: 30px;
+          line-height: 100px;
+          background-color: silver;
+        }
+        .box1 {
+          background-color: orange;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .container {
+          background-color: darkslategray;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .box {
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          font-family: sans-serif;
+          font-size: 30px;
+          line-height: 100px;
+          background-color: silver;
+        }
+      }
+      /* Print Style Declaration */
+      @media print {
+        .container {
+          background-color: darkslategray;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .box {
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          font-family: sans-serif;
+          font-size: 30px;
+          line-height: 100px;
+          border: 1px solid black;
+        }
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        setInterval(function () {
+          document.getElementById("log").innerText = window.innerWidth + " px";
+        }, 100);
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="log"></h1>
+    <!-- section.container>article.box.box$*10 -->
+    <section class="container">
+      <article class="box box1">1</article>
+      <article class="box box2">2</article>
+      <article class="box box3">3</article>
+      <article class="box box4">4</article>
+      <article class="box box5">5</article>
+      <article class="box box6">6</article>
+      <article class="box box7">7</article>
+      <article class="box box8">8</article>
+      <article class="box box9">9</article>
+      <article class="box box10">10</article>
+      <article class="box box11">11</article>
+      <article class="box box12">12</article>
+    </section>
+  </body>
+</html>

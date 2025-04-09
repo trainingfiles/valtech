@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1500px;
+        background-color: darkslategray;
+        margin: auto;
+      }
+      .box {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 30px;
+      }
+      .box1 {
+        background-color: #f94144;
+      }
+      .box2 {
+        background-color: #f3722c;
+      }
+      .box3 {
+        background-color: #f8961e;
+      }
+      .box4 {
+        background-color: #f9844a;
+      }
+      .box5 {
+        background-color: #f9c74f;
+      }
+      .box6 {
+        background-color: #90be6d;
+      }
+      .box7 {
+        background-color: #43aa8b;
+      }
+      .box8 {
+        background-color: #4d908e;
+      }
+      .box9 {
+        background-color: #577590;
+      }
+      .box10 {
+        background-color: #277da1;
+      }
+      .box11 {
+        background-color: crimson;
+      }
+      .box12 {
+        background-color: rgb(20, 220, 43);
+      }
+      /* Grid Properties */
+
+      .container {
+        display: grid;
+        /* grid-template-columns: 200px 200px 200px 200px; */
+        /* grid-template-rows: 100px 100px 100px 100px 250px 400px; */
+        /* grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(2, 100px);
+        grid-template-areas: "ek be tran chaar" "panj cha sata atha"; */
+        /* grid-template-columns: 25% 50% 10% 15%; */
+        /* grid-template-rows: 33% 25% 25% 17%;  */
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .box {
+      }
+      .box1 {
+        /* grid-column: 1 / 4; */
+        grid-column: 1 / span 2;
+      }
+      .box2 {
+        /* grid-column: 4 / 5; */
+        grid-column: 3 / span 2;
+      }
+      .box3 {
+        /* grid-column: 4 / 5; */
+        grid-column: 1 / span 4;
+      }
+      .box4 {
+        grid-row: 3 / span 3;
+      }
+      .box5 {
+      }
+      .box6 {
+      }
+      .box7 {
+      }
+      .box8 {
+      }
+      .box9 {
+      }
+      .box10 {
+      }
+      .box11 {
+      }
+      .box12 {
+      }
+    </style>
+  </head>
+  <body>
+    <!-- section.container>article.box.box$*10 -->
+    <section class="container">
+      <article class="box box1">1</article>
+      <article class="box box2">2</article>
+      <article class="box box3">3</article>
+      <article class="box box4">4</article>
+      <article class="box box5">5</article>
+      <article class="box box6">6</article>
+      <article class="box box7">7</article>
+      <article class="box box8">8</article>
+      <article class="box box9">9</article>
+      <article class="box box10">10</article>
+      <article class="box box11">11</article>
+      <article class="box box12">12</article>
+    </section>
+  </body>
+</html>
