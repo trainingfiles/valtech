@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* function */
+      /* 
+      function saymyname() {
+        return "Vijay";
+      } 
+      */
+      /* ++++++++++++++++++++++++++++++++++++++ */
+      /* method */
+      /* 
+      var hero = {
+        firstname: "Tony",
+        lastname: "Stark",
+        fullname: function () {
+          return this.firstname + " " + this.lastname;
+        },
+      };
+      console.log(hero.fullname()); 
+      */
+      /* ++++++++++++++++++++++++++++++++++++++ */
+      /* function as class */
+      /* 
+
+      function Hero(fname, lname) {
+        var secret = "my mission";
+        this.firstname = fname;
+        this.lastname = lname;
+        this.fullname = function () {
+          return this.firstname + " " + this.lastname;
+        };
+      }
+      var avenger1 = new Hero("Tony", "Stark");
+      console.log(avenger1.fullname()); // Tony Stark;
+      console.log(avenger1.firstname);
+      console.log(avenger1.secret); // not Accessible 
+      
+      */
+      /* ++++++++++++++++++++++++++++++++++++++ */
+      /* Module
+      IIAF Immediately invoked anonymous function
+      SIAF Self invoking anonymous function
+      */
+      function closeme() {
+        self.close();
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="log"></h1>
+    <h2>Functions in JavaScript</h2>
+    <button onclick="closeme()">click to close</button>
+    <script>
+      // console.log((3+2)+(1+2))
+      var mymod = (function (message) {
+        // console.log(message.toUpperCase());
+        return {
+          message: message,
+          favnum: 55,
+          myfun: function () {
+            console.log("did you call me");
+          },
+        };
+      })("welcome to your life");
+
+      console.log(mymod.message);
+      console.log(mymod.favnum);
+      mymod.myfun();
+
+      var mylist = [
+        "tony",
+        56,
+        [1, 2, 3],
+        function () {
+          return "hello from an array";
+        },
+      ];
+      console.log(mylist[3]());
+    </script>
+  </body>
+</html>

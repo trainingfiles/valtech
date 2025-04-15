@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Crud</title>
+    <style>
+      .container {
+        width: 900px;
+        height: 400px;
+        background-color: salmon;
+        border: 1px solid transparent;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        align-content: flex-start;
+        margin: auto;
+      }
+      .container .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(189, 25, 7);
+        flex-shrink: 0;
+        margin: 10px;
+        font-family: sans-serif;
+        text-align: center;
+        line-height: 100px;
+        font-weight: bold;
+        font-size: 36px;
+        color: papayawhip;
+      }
+      .container .box:hover {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(249, 225, 222);
+        box-shadow: 5px 5px 5px black;
+        color: rgb(55, 55, 55);
+        cursor: pointer;
+      }
+    </style>
+    <!-- <script defer src="myscript.js"></script> -->
+    <!-- <script async src="myscript.js"></script> -->
+    <script>
+      /* function init() {
+
+      } */
+      /* window.onload = init; */
+      // window.addEventListener("load", init);
+      // document.addEventListener("DOMContentLoaded", init);
+      document.addEventListener("DOMContentLoaded", init);
+      function removeMe() {
+        var elm = this;
+        if (elm) {
+          document.querySelector(".container").removeChild(elm);
+        } else {
+          alert("nothing to remove");
+        }
+      }
+      var count = 1;
+      function addBoxHandler() {
+        var elm = document.createElement("div");
+        elm.textContent = count;
+        elm.setAttribute("class", "box");
+        // elm.onclick = removeMe;
+        document.querySelector(".container").appendChild(elm);
+        count++;
+      }
+      function removeFirstBoxHandler() {
+        var elm = document.querySelector(".container").firstChild;
+        if (elm) {
+          document.querySelector(".container").removeChild(elm);
+        } else {
+          alert("nothing to remove");
+        }
+      }
+      function removeLastBoxHandler() {
+        var elm = document.querySelector(".container").lastChild;
+        if (elm) {
+          document.querySelector(".container").removeChild(elm);
+        } else {
+          alert("nothing to remove");
+        }
+      }
+      function removeSelectedBoxHandler(event) {
+        // console.log(event.target.getAttribute("class") === "box");
+        if (event.target.getAttribute("class") === "box") {
+          document.querySelector(".container").removeChild(event.target);
+        }
+      }
+      function init() {
+        document
+          .getElementsByTagName("button")[0]
+          .addEventListener("click", addBoxHandler);
+        document
+          .getElementsByTagName("button")[1]
+          .addEventListener("click", removeFirstBoxHandler);
+        document
+          .getElementsByTagName("button")[2]
+          .addEventListener("click", removeLastBoxHandler);
+        document
+          .getElementsByClassName("container")[0]
+          .addEventListener("click", removeSelectedBoxHandler);
+
+        /*  for (var i = 0; i < 1000; i++) {
+          var elm = document.createElement("div");
+          elm.textContent = count;
+          elm.setAttribute("class", "box");
+          elm.onclick = removeMe;
+          document.querySelector(".container").appendChild(elm);
+          count++;
+        } */
+      }
+    </script>
+  </head>
+  <!-- <body onload="init()"> -->
+  <body>
+    <button>Add Box</button>
+    <button>Remove First Box</button>
+    <button>Remove Last Box</button>
+    <hr />
+    <div class="container"></div>
+    <!-- <script src="myscript.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function domContentLoadedFun() {
+        document.getElementById("log").innerText +=
+          "DOM Content Loaded was called \n";
+      }
+      function windowOnLoadFun() {
+        document.getElementById("log").innerText +=
+          "window on load was called \n";
+      }
+      function bodyOnloadFun() {
+        document.getElementById("log").innerText +=
+          "body on load was called \n";
+      }
+      document.addEventListener("DOMContentLoaded", domContentLoadedFun);
+      window.onload = windowOnLoadFun;
+    </script>
+  </head>
+  <body onload="bodyOnloadFun()">
+    <h2 id="log"></h2>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 
+      window.onload = function () {
+        // console.log(document.body.firstChild.nextSibling.childNodes);
+      }; 
+      */
+      function init() {
+        /* document.getElementsByTagName("button")[0].onclick = function () {
+          var elm = document.createElement("li");
+          elm.textContent = "i am new list";
+          document.getElementsByTagName("ul")[0].appendChild(elm);
+        }; */
+        /* document.getElementsByClassName("btn")[0].onclick = function () {
+          var elm = document.createElement("li");
+          elm.textContent = "i am new list";
+          document.getElementsByTagName("ul")[0].appendChild(elm);
+        }; */
+        /* document.getElementById("gen").onclick = function () {
+          var elm = document.createElement("li");
+          elm.textContent = "i am new list";
+          document.getElementsByTagName("ul")[0].appendChild(elm);
+        }; */
+        /* document.querySelector(".btn").onclick = function () {
+          var elm = document.createElement("li");
+          elm.textContent = "i am new list";
+          document.getElementsByTagName("ul")[0].appendChild(elm);
+        }; */
+        /* document.querySelectorAll(".btn")[1].onclick = function () {
+          var elm = document.createElement("li");
+          elm.textContent = "i am new list";
+          document.getElementsByTagName("ul")[0].appendChild(elm);
+        }; */
+        document.getElementsByName("firstbtn")[0].onclick = function () {
+          /* 
+          var elm = document.createElement("li");
+          elm.textContent = "i am new list";
+          document.getElementsByTagName("ul")[0].appendChild(elm); 
+          */
+          document.getElementsByTagName("ul")[0].innerHTML += "<li>new list item</li>"
+        };
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <button name="firstbtn" class="btn" id="gen">
+      Create a new list item 1
+    </button>
+    <button name="secondbtn" class="btn" id="gen">
+      Create a new list item 2
+    </button>
+    <ul>
+      <li>List Item 1</li>
+    </ul>
+  </body>
+</html>

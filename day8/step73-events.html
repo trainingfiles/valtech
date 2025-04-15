@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: silver;
+        height: 500px;
+        border: 1px solid transparent;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+      }
+      .container .box {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: orangered;
+        flex-shrink: 0;
+      }
+    </style>
+    <script>
+      function addBoxHandler() {
+        var elm = document.createElement("div");
+        elm.setAttribute("class", "box");
+        document.querySelector(".container").appendChild(elm);
+      }
+      function removeBoxHandler() {
+        document
+          .getElementsByTagName("button")[0]
+          .removeEventListener("click", addBoxHandler);
+      }
+      function removeContainerBoxHandler() {
+        var elm = document.querySelector(".container").firstChild;
+        if (elm) {
+          document.querySelector(".container").removeChild(elm);
+        } else {
+          alert("nothing to remove");
+        }
+      }
+      function init() {
+        document
+          .getElementsByTagName("button")[0]
+          .addEventListener("click", addBoxHandler);
+        document
+          .getElementsByTagName("button")[1]
+          .addEventListener("click", removeBoxHandler);
+        document
+          .getElementsByTagName("button")[2]
+          .addEventListener("click", removeContainerBoxHandler);
+      }
+      document.addEventListener("DOMContentLoaded", init);
+    </script>
+  </head>
+  <body>
+    <button>Add Box</button>
+    <button>Remove Box</button>
+    <button>Remove Box from Container</button>
+    <div class="container"></div>
+  </body>
+</html>
