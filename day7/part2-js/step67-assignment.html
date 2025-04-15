@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function adder() {
+        var val1 = document.getElementsByTagName("input")[0].value;
+        var val2 = document.getElementsByTagName("input")[1].value;
+        // document.getElementsByTagName("span")[0].textContent = Number(val1) + Number(val2);
+        // document.getElementsByTagName("span")[0].textContent = parseInt(val1) + parseInt(val2);
+        document.getElementsByTagName("span")[0].textContent = parseFloat(val1) + parseFloat(val2);
+      }
+    </script>
+    <style>
+      div {
+        width: 350px;
+        padding: 10px;
+      }
+      div label {
+        width: 100px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="">First Value</label>
+      <input type="text" />
+    </div>
+    <div>
+      <label for="">Second Value</label>
+      <input type="text" />
+    </div>
+    <div>
+      <button onclick="adder()">Click Me to Add</button>
+    </div>
+    <h2>Total is : <span></span></h2>
+  </body>
+</html>
+
+<!-- 
+https://p.ip.fi/_--Q
+-->

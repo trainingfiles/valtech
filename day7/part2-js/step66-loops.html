@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 
+        { title: "Ironman", power: 9 },
+        { title: "Black Widow", power: 2 },
+        { title: "Captain America", power: 6 },
+        { title: "Thor", power: 7 },
+        { title: "Spiderman", power: 8 },
+        */
+      var heroes = {
+        firstname: "Tony",
+        lastname: "Stark",
+        title: "Ironman",
+        power: 9,
+      };
+      for (var prop in heroes) {
+        /* 
+        console.log(prop);
+        */
+        console.log(prop, heroes[prop]);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
