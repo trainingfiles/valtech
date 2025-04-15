@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes valtech {
+        0% {
+          background: url(images/horse.jpg) 0px;
+        }
+        10% {
+          background: url(images/horse.jpg) 200px;
+        }
+        20% {
+          background: url(images/horse.jpg) 400px;
+        }
+        30% {
+          background: url(images/horse.jpg) 600px;
+        }
+        40% {
+          background: url(images/horse.jpg) 800px;
+        }
+        50% {
+          background: url(images/horse.jpg) 1000px;
+        }
+        60% {
+          background: url(images/horse.jpg) 1200px;
+        }
+        70% {
+          background: url(images/horse.jpg) 1400px;
+        }
+        80% {
+          background: url(images/horse.jpg) 1600px;
+        }
+        90% {
+          background: url(images/horse.jpg) 1800px;
+        }
+        100% {
+          background: url(images/horse.jpg) 2000px;
+        }
+      }
+      .box {
+        width: 200px;
+        height: 134px;
+      }
+      .container {
+        width: 1200px;
+        align-items: center;
+        height: 600px;
+        background-color: silver;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        animation-name: valtech;
+        /* animation-duration: 41.6ms; */
+        animation-duration: 83.2ms;
+        animation-iteration-count: infinite;
+        /* animation-timing-function: linear; */
+        /* animation-direction: alternate-reverse; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
