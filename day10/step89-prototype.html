@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function Person() {}
+      Person.prototype.logcity = function () {
+        return "from Surat";
+      };
+      var Hero = new Person();
+      Hero.prototype.fullname = function () {
+        return "Hero Full Name";
+      };
+      Hero.prototype.saymessage = function () {
+        return " Says Hi";
+      };
+
+      var firsthero = new Hero();
+      var secondhero = new Hero();
+      var thirdhero = new Hero();
+      var fourthero = new Hero();
+      console.log(firsthero.fullname());
+      console.log(secondhero.fullname());
+      console.log(thirdhero.fullname());
+      console.log(fourthero.fullname());
+      console.log(fourthero.saymessage());
+      console.log(firsthero.saymessage());
+      console.log(firsthero.fullname === secondhero.fullname);
+    </script>
+  </head>
+  <body></body>
+</html>

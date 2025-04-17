@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Person {
+        canWalk = "I can walk";
+        constructor(newability = null) {
+          if (newability) {
+            this.canWalk = newability;
+          }
+        }
+      }
+      class Hero extends Person {
+        firstname = "default";
+        lastname = "default";
+        static version = 1001;
+        #mission = "My Secret Mission";
+        constructor(fname, lname, args) {
+          super(args);
+          this.firstname = fname;
+          this.lastname = lname;
+        }
+        fullname() {
+          return this.firstname + " " + this.lastname;
+        }
+        get mission() {
+          return this.#mission;
+        }
+        set mission(nmission) {
+          this.#mission = nmission;
+        }
+      }
+
+      let hero = new Hero("tony", "stark", "I can fly");
+      let hero1 = new Hero("bruce", "benner", "I can jump");
+      let hero2 = new Hero("kit", "walker");
+      console.log(hero.fullname());
+      console.log(hero.mission);
+      hero.mission = "Save the world";
+      console.log(hero.mission);
+      console.log(Hero.version);
+      console.log(hero.canWalk);
+      console.log(hero1.canWalk);
+      console.log(hero2.canWalk);
+
+      console.log(hero.fullname === hero1.fullname); // true
+    </script>
+  </head>
+  <body></body>
+</html>

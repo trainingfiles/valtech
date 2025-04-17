@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 800px;
+        margin: auto;
+        font-family: sans-serif;
+        border: 1px solid grey;
+      }
+      table th {
+        background-color: rgb(34, 40, 40);
+        color: aliceblue;
+      }
+      table tr,
+      td {
+        border: 1px solid grey;
+      }
+      td {
+        text-align: center;
+      }
+      button {
+        display: block;
+        padding: 10px;
+        margin: 10px auto;
+      }
+    </style>
+    <script>
+      let xhr = new XMLHttpRequest();
+      function ajaxHandler(evt) {
+        if (evt.target.readyState === 4) {
+          /* document.querySelector(".container").textContent =
+            evt.target.responseText; */
+          let data = JSON.parse(evt.target.responseText);
+          data.hl.forEach((val) => {
+            document.querySelector("#tbody").innerHTML += `
+            <tr>
+          <td>${val.sl}</td>
+          <td>${val.title}</td>
+          <td>
+            <img width="50" src="${val.poster.replace("assets/", "")}" alt="${
+              val.sl
+            }" />
+          </td>
+          <td>${val.firstname + " " + val.lastname}</td>
+          <td>${val.city}</td>
+          <td>${"₹ " + val.ticketprice}</td>
+          <td>${val.releasedate}</td>
+        </tr>
+            `;
+          });
+        }
+      }
+      xhr.addEventListener("readystatechange", ajaxHandler);
+      document.addEventListener("DOMContentLoaded", init);
+      let clickHandler = function (evt) {};
+      function init() {
+        xhr.open("get", "data/data1.json");
+        xhr.send();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Sl #</th>
+          <th>Title</th>
+          <th>Poster</th>
+          <th>Full Name</th>
+          <th>City</th>
+          <th>Ticket Price</th>
+          <th>Release Date</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1200px;
+        height: 400px;
+        background-color: silver;
+        color: rgb(33, 40, 40);
+        font-family: sans-serif;
+        padding: 10px;
+        text-align: justify;
+        margin: 10px auto;
+        overflow: auto;
+      }
+      button {
+        display: block;
+        padding: 10px;
+        margin: 10px auto;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", init);
+      let clickHandler = function (evt) {
+        fetch("data/data.txt")
+          .then((res) => res.text())
+          .then(
+            (data) =>
+              (document.getElementsByClassName("container")[0].textContent =
+                data)
+          )
+          .catch((err) => console.log(err));
+      };
+      function init() {
+        document
+          .querySelector("button")
+          .addEventListener("click", clickHandler);
+      }
+    </script>
+  </head>
+  <body>
+    <button>Click Me to Load Data</button>
+    <div class="container"></div>
+  </body>
+</html>

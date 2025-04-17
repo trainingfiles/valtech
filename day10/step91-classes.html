@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+      class Hero {
+        private properties
+          getters
+          setters
+        private methods
+        static properties
+        static methods
+
+        public properties
+        public methods
+        constructor
+      }
+        */
+      class Hero {
+        // public properties
+        firstname = "default";
+        lastname = "default";
+        // static properties
+        static version = 1001;
+        // private properties
+        #mission = "My Secret Mission";
+        // constructor
+        constructor(fname, lname) {
+          this.firstname = fname;
+          this.lastname = lname;
+        }
+        // public method
+        fullname() {
+          return this.firstname + " " + this.lastname;
+        }
+        /*  #saymessage() {
+          return "Hello there";
+        } 
+          */
+        /*  
+       static saymessage() {
+          return "Hello there";
+        } 
+          */
+        get mission() {
+          return this.#mission;
+        }
+        set mission(nmission) {
+          this.#mission = nmission;
+        }
+      }
+
+      let hero = new Hero("tony", "stark");
+      let hero1 = new Hero("bruce", "benner");
+      console.log(hero.fullname());
+      console.log(hero.mission);
+      hero.mission = "Save the world";
+      console.log(hero.mission);
+      console.log(Hero.version);
+
+      console.log(hero.fullname === hero1.fullname); // true
+    </script>
+  </head>
+  <body></body>
+</html>

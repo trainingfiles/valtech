@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1200px;
+        height: 400px;
+        background-color: silver;
+        color: rgb(33, 40, 40);
+        font-family: sans-serif;
+        padding: 10px;
+        text-align: justify;
+        margin: 10px auto;
+        overflow: auto;
+      }
+      button {
+        display: block;
+        padding: 10px;
+        margin: 10px auto;
+      }
+    </style>
+    <script>
+      let xhr = new XMLHttpRequest();
+      function ajaxHandler(evt) {
+        // console.log(evt.target.readyState);
+        if (evt.target.readyState === 4) {
+          document.querySelector(".container").textContent =
+            evt.target.responseText;
+        }
+      }
+      xhr.addEventListener("readystatechange", ajaxHandler);
+      document.addEventListener("DOMContentLoaded", init);
+      let clickHandler = function (evt) {
+        xhr.open("get", "data/data.txt");
+        xhr.send();
+      };
+      function init() {
+        document
+          .querySelector("button")
+          .addEventListener("click", clickHandler);
+      }
+    </script>
+  </head>
+  <body>
+    <button>Click Me to Load Data</button>
+    <div class="container"></div>
+  </body>
+</html>

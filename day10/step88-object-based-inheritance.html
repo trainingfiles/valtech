@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Based Inheritance</title>
+    <script>
+      var person = Object.create(null);
+      Object.defineProperty(person, "canwalk", {
+        value: "Yes",
+        enumerable: true,
+      });
+      Object.defineProperty(person, "boost", {
+        value: function () {
+          return this.canwalk + " faster";
+        },
+        enumerable: true,
+      });
+      var hero = Object.create(person);
+      Object.defineProperty(hero, "title", {
+        value: "Batman",
+        enumerable: true,
+      });
+      Object.defineProperty(hero, "power", {
+        value: 6,
+        enumerable: true,
+      });
+      console.log(hero.canwalk);
+      console.log(hero.boost());
+    </script>
+  </head>
+  <body></body>
+</html>
