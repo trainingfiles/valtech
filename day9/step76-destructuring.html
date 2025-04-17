@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 
+      let hero = {
+        firstname: "Bruce",
+        lastname: "Benner",
+        title: "Hulk",
+        power: 8,
+      };
+      let temphero = hero;
+      console.log(hero.title); // hulk
+      console.log(temphero.title); // Hulk
+      temphero.title = "Dr Strange";
+      console.log(temphero.title); // Dr Strange
+      console.log(hero.title); // Hulk ??? 
+      */
+      let hero = {
+        fName: "Bruce",
+        lName: "Benner",
+        title: "Hulk",
+        power: 8,
+      };
+      /* legacy */
+      /*       
+      var herofName = hero.fName;
+      var herolName = hero.lName;
+      var herotitle = hero.title;
+      var heropower = hero.power; 
+      */
+
+      /* legacy */
+      /* 
+        var herofName = hero.fName,
+        herolName = hero.lName,
+        herotitle = hero.title,
+        heropower = hero.power; 
+        */
+      /* ES6 */
+      /*  
+     let {
+        fName: herofName,
+        lName: herolName,
+        title: herotitle,
+        power: heropower,
+      } = hero; 
+      
+      console.log(herotitle); // ???
+      */
+      let { fName, lName, title } = hero;
+      console.log(fName); // Bruce
+      fName = "Phantom";
+      console.log(fName); // Phantom
+      console.log(); // Bruce
+      hero.fName = "Dr Strange";
+      console.log(fName); // Bruce
+      console.log(hero.fName); // Dr Strange
+    </script>
+  </head>
+  <body></body>
+</html>

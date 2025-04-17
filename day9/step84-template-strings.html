@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Strings</title>
+    <script>
+      let hero = {
+        title: "Superman",
+        firsname: "Clark",
+        lastname: "Kent",
+        city: "Metropolis",
+        power: 9,
+      };
+      let longMessage = `
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dolores nulla debitis accusantium dolorum, 
+                        vero eius quisquam eligendi reiciendis quae. 
+                        Vero labore sapiente neque voluptatum magnam 
+                        harum quam obcaecati blanditiis maxime!
+                        Ab veritatis possimus nemo et delectus ${5 * 5} 
+                        accusantium porro, earum ipsam inventore atque 
+                        velit eos necessitatibus facere modi magnam, 
+                        quasi fugit ducimus ipsa recusandae. Explicabo 
+                        cum assumenda consequatur temporibus recusandae!
+                        `;
+      console.log(longMessage);
+    </script>
+  </head>
+  <body></body>
+</html>

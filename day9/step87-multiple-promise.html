@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let firstpromise = () => {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (true) {
+              resolve("First Promise Was Resolved");
+            } else {
+              reject("First Promise Was Rejected");
+            }
+          }, 4000);
+        });
+      };
+      let secondpromise = () => {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (false) {
+              resolve("Second Promise Was Resolved");
+            } else {
+              reject("Second Promise Was Rejected");
+            }
+          }, 1000);
+        });
+      };
+      let thirdpromise = () => {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (true) {
+              resolve("Third Promise Was Resolved");
+            } else {
+              reject("Third Promise Was Rejected");
+            }
+          }, 2000);
+        });
+      };
+      /* Promise.all([firstpromise(), secondpromise(), thirdpromise()])
+        .then((res) => {
+          console.log(res[0], res[1], res[2]);
+        })
+        .catch((err) => {
+          console.log("error ", err);
+        })
+        .finally(() => {
+          console.log("all promises are settled");
+        }); */
+      /* Promise.any([firstpromise(), secondpromise(), thirdpromise()])
+        .then((res) => {
+          // console.log(res[0], res[1], res[2]);
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log("error ", err);
+        })
+        .finally(() => {
+          console.log("all promises are settled");
+        }); */
+      /*  Promise.allSettled([firstpromise(), secondpromise(), thirdpromise()])
+        .then((res) => {
+          // console.log(res[0], res[1], res[2]);
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log("error ", err);
+        })
+        .finally(() => {
+          console.log("all promises are settled");
+        }); */
+      Promise.race([firstpromise(), secondpromise(), thirdpromise()])
+        .then((res) => {
+          // console.log(res[0], res[1], res[2]);
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log("error ", err);
+        })
+        .finally(() => {
+          console.log("all promises are settled");
+        });
+    </script>
+  </head>
+  <body></body>
+</html>

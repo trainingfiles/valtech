@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var hero = {
+        title: "Ironman",
+        power: 7,
+      };
+      function checkpower() {
+        // temporal dead zone - TDZ
+        if (hero.power > 6) {
+          let temptitle = hero.title;
+          hero.title = temptitle + " is strong";
+          // console.log(temptitle); // ????
+        }
+      }
+      checkpower();
+      console.log(hero.title); // ????
+    </script>
+  </head>
+  <body></body>
+</html>

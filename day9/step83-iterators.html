@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let favnums = [
+        18, 44, 29, 13, 26, 13, 9, 7, 28, 45, 33, 13, 85, 99, 25, 1, 17, 68, 2,
+        75,
+      ];
+      // iterable
+      let vals = favnums.values();
+      let next = vals.next;
+      while (!next.done) {
+        next = vals.next();
+        console.log(next);
+      }
+
+      /*
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      console.log(vals.next());
+      */
+      function* adder(num1, num2) {
+        yield "first yield : " + Math.round(Math.random() * 500);
+        yield "second yield : " + Math.round(Math.random() * 500);
+        yield "third yield : " + Math.round(Math.random() * 500);
+        yield "fourth yield : " + Math.round(Math.random() * 500);
+        yield "fifth yield : " + Math.round(Math.random() * 500);
+        yield "sixth yield : " + Math.round(Math.random() * 500);
+      }
+
+      let fun = adder();
+
+      console.log(fun.next());
+      console.log(fun.next());
+      console.log(fun.next());
+      console.log(fun.next());
+      console.log(fun.next());
+      console.log(fun.next());
+      console.log(fun.next());
+    </script>
+  </head>
+  <body></body>
+</html>

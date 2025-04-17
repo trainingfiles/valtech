@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functional programming in JS</title>
+    <script>
+      /* function adder(num1, num2) {
+        let arg1 = num1 || 0;
+        let arg2 = num2 || 0;
+        return arg1 + arg2;
+      } */
+      /*  function adder(num1 = 0, num2 = 0) {
+        return num1 + num2;
+      } */
+      function adder(num1, num2) {
+        return num1 + num2;
+      }
+      console.log(adder(5, null));
+      /*
+      function adder(num1, num2) {
+        return num1 + num2;
+      }
+        */
+      /* function adder() {
+        let total = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          total += arguments[i];
+        }
+        return total;
+      } */
+      // console.log(adder(5, 6)); // 11
+      // Rest Arguments
+      /* function adder(compname, ...nums) {
+        let total = 0;
+        for (let i = 0; i < nums.length; i++) {
+          total += nums[i];
+        }
+        return compname + " : " + total;
+      } */
+      /* 
+      console.log(adder("valtech", 5)); // NaN
+      console.log(adder("valtech", 5, 6)); // 11
+      console.log(adder("valtech", 5, 6, 7)); // ???
+      console.log(adder("valtech", 5, 6, 7, 8)); // ??? */
+      /*  let favnums = [5, 6, 7, 8, 9];
+      console.log(adder("valtech", ...favnums)); // ??? */
+    </script>
+  </head>
+  <body></body>
+</html>

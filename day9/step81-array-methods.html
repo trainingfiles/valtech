@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array methods</title>
+    <script>
+      let favnums = [
+        18, 44, 29, 13, 26, 13, 9, 7, 28, 45, 33,13, 85, 99, 25, 1, 17, 68, 2, 75,
+      ];
+
+      /*  for (let i = 1; i < favnums.length; i++) {
+        console.log(favnums[i]);
+      } */
+      /* let doublefavNum = [];
+      favnums.forEach((value, index, arr) => {
+        // console.log(value, index, arr);
+        doublefavNum.push(value * 2);
+      });
+      console.log(favnums);
+      console.log(doublefavNum); */
+      /* 
+      let doublefavNum = favnums.map( value => value * 2);
+      console.log(favnums);
+      console.log(doublefavNum); 
+      */
+     /* 
+     let lessThan50 = favnums.filter( val => val < 50);
+     console.log(lessThan50); 
+     */
+
+     // console.log(favnums.every(val => val < 90));
+    /*  favnums.every(val => {
+       console.log(val);
+       return val < 90;
+     }) */
+     /* favnums.some(val => {
+       console.log(val);
+       return val < 90;
+     }); */
+
+     // console.log(favnums.reduceRight(function(initval,val){ return initval + val },0))
+     let first13 = favnums.indexOf(13)+1
+     console.log(favnums.indexOf(13,first13));
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+    <script>
+      let promise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          if (true) {
+            resolve("Promise Was Resolved");
+          } else {
+            reject("Promise Was Rejected");
+          }
+        }, 2000);
+      });
+      /* // success
+      promise.then(function (res) {
+        console.log("Res ", res);
+      });
+      // error
+      promise.catch(function (err) {
+        console.log("Error ", err);
+      });
+      // exit
+      promise.finally(function () {
+        console.log("Promise is complete");
+      }); */
+      // success
+      /*
+      promise.then(
+        function (res) {
+          console.log("Res ", res);
+        },
+        function (err) {
+          console.log("Error ", err);
+        }
+      ); */
+      promise
+        .then(function (res) {
+          console.log("Res ", res);
+          return res.toUpperCase();
+        })
+        .then(function (res) {
+          console.log("Res ", res);
+          return res.toLowerCase();
+        })
+        .then(function (res) {
+          console.log("Res ", res);
+        })
+        .catch(function (err) {
+          console.log("Error ", err);
+        })
+        .finally(function () {
+          console.log("Promise is complete");
+        });
+    </script>
+  </head>
+  <body></body>
+</html>

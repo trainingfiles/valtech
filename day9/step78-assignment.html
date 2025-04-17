@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* var cart = {
+        title: "My Cart",
+        getCostPrice: function () {
+          return 100;
+        },
+        getSellingPrice: function () {
+          // console.log(this);
+          var calculateProfit = function (scope) {
+            return scope.getCostPrice() * 0.2;
+          };
+          return this.getCostPrice() + calculateProfit(this);
+        },
+      }; */
+      /* var cart = {
+        title: "My Cart",
+        getCostPrice: function () {
+          return 100;
+        },
+        getSellingPrice: function () {
+          var scope = this;
+          var calculateProfit = function () {
+            return scope.getCostPrice() * 0.2;
+          };
+          return this.getCostPrice() + calculateProfit();
+        },
+      }; */
+      /* var cart = {
+        title: "My Cart",
+        getCostPrice: function () {
+          return 100;
+        },
+        getSellingPrice: function () {
+          var calculateProfit = function () {
+            return this.getCostPrice() * 0.2;
+          };
+          // return this.getCostPrice() + calculateProfit.call(this);
+          // return this.getCostPrice() + calculateProfit.apply(this);
+          return this.getCostPrice() + calculateProfit.bind(this)();
+        },
+      }; */
+      var getCostPrice = function () {
+        return 10000;
+      };
+      var cart = {
+        title: "My Cart",
+        getCostPrice: () => {
+          return 100;
+        },
+        getSellingPrice: function () {
+          var calculateProfit = () => {
+            return this.getCostPrice() * 0.2;
+          };
+          return this.getCostPrice() + calculateProfit();
+        },
+      };
+      console.log(cart.getCostPrice()); // ???
+      console.log(cart.getSellingPrice()); // 120
+    </script>
+  </head>
+  <body></body>
+</html>

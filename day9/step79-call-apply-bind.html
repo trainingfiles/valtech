@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var ironman = {
+        firstname: "Tony",
+        lastname: "Stark",
+        fullname: function (city, power) {
+          return (
+            this.firstname +
+            " " +
+            this.lastname +
+            " is from " +
+            city +
+            " with power " +
+            power
+          );
+        },
+      };
+      var spiderman = {
+        firstname: "Peter",
+        lastname: "Patel",
+      };
+      var captainamerica = {
+        firstname: "Steve",
+        lastname: "Shah",
+      };
+      // console.log(ironman.fullname.call(spiderman, "Ahmedabad", 7));
+      // console.log(ironman.fullname.apply(spiderman, ["Ahmedabad", 7]));
+      /* var multiverse = ironman.fullname.bind(captainamerica);
+      console.log(multiverse("Ahmedabad", 7));
+      console.log(multiverse("Surat", 6));
+      console.log(multiverse("Junagar", 2)); */
+      console.log(ironman.fullname.call(spiderman, "Ahmedabad", 7));
+      console.log(ironman.fullname.call(captainamerica, "Jaipur", 9));
+    </script>
+  </head>
+  <body></body>
+</html>

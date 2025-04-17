@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+    <script>
+      /*         
+        var obj1 = {};
+        var obj2 = new Object(); 
+        var obj3 = Object.create(template);
+        */
+      var hero = Object.create(null);
+      /* 
+       Object.defineProperty(hero,"title",{value : "Ironman"});
+       Object.defineProperty(hero,"firstname",{value : "Tony"});
+       Object.defineProperty(hero,"lastname",{value : "Stark"});
+       Object.defineProperty(hero,"power",{value : 7, writable : true}); 
+       */
+      Object.defineProperties(hero, {
+        title: {
+          value: "Batman",
+          enumerable: true,
+          writable: true,
+          configurable: true,
+        },
+        firstname: { value: "Bruce", enumerable: true },
+        lastname: { value: "Wayne", enumerable: true },
+        power: { value: 6, writable: true, enumerable: true },
+        accessPower: {
+          get: function () {
+            return this.power;
+          },
+          set: function (npower) {
+            this.power = npower;
+          },
+        },
+        city: { value: "Gotham" },
+      });
+      for (var prop in hero) {
+        console.log(prop, hero[prop]);
+      }
+      console.log("+++++++++++++++++++++++++++++++++");
+      Object.defineProperty(hero, "title", {
+        value: "Joker",
+        configurable: false,
+        writable: false,
+      });
+      /* console.log(hero.power);// ???
+       hero.power = 9;
+       console.log(hero.power);// ??? */
+
+      for (var prop in hero) {
+        console.log(prop, hero[prop]);
+      }
+      console.log("+++++++++++++++++++++++++++++++++");
+      console.log(hero.accessPower);
+      hero.accessPower = 3;
+      console.log(hero.accessPower);
+      // Object.defineProperty(hero,"title",{configurable: true, writable : true, value : "Joker"})
+    </script>
+  </head>
+  <body></body>
+</html>

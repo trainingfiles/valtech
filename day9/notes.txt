@@ -1,0 +1,19 @@
+step76-destructuring : https://p.ip.fi/Ze_L
+step77-fun : https://p.ip.fi/HYKf
+
+assignment : https://p.ip.fi/ycQY
+solution : https://p.ip.fi/Ztjd
+call-apply-bind : https://p.ip.fi/gbxX
+
+favnums : https://p.ip.fi/XCS-
+
+array methods : https://p.ip.fi/89FM
+
+iterators & generators : https://p.ip.fi/hbDI
+
+data : https://p.ip.fi/nOQ5
+
+promise : https://p.ip.fi/fhKz
+
+https://p.ip.fi/Xj17
+
